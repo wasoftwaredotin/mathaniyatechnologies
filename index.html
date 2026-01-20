@@ -234,6 +234,33 @@
         .menu-btn-modern.active .bar-line:nth-child(3) { width: 100%; transform: translateY(-7px) rotate(-45deg); background: #ef4444; }
         @media (min-width: 768px) { .menu-btn-modern.active .bar-line:nth-child(3) { transform: translateY(-9px) rotate(-45deg); } }
 
+        /* NEW UPDATED COMPACT LABEL STYLE (Green & Overlapping) */
+        .offer-label-pro {
+            position: absolute;
+            top: -10px; /* Half up / Half down overlap */
+            left: 10px;
+            background: linear-gradient(135deg, #059669, #10b981); /* Green Background */
+            color: #ffffff;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 900;
+            font-size: 8px; /* Very Compact */
+            padding: 2px 8px; /* Less Gap */
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid #34d399;
+            z-index: 20;
+            white-space: nowrap;
+        }
+
+        @media (min-width: 768px) { 
+            .offer-label-pro { font-size: 10px; top: -12px; padding: 3px 10px; left: 16px; } 
+        }
+
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 pb-20 md:pb-0">
@@ -323,7 +350,7 @@
 
                             <!-- UPDATED SERVICES SECTION - STYLISH GRID LAYOUT -->
                             <div class="bg-white p-6 md:p-8 rounded-[2.5rem] border border-emerald-100 shadow-xl text-left">
-                                <h2 class="text-3xl md:text-5xl font-black text-center text-slate-800 mb-8 drop-shadow-sm" style="font-family: 'Kaushan Script', cursive;">Our Premium Services & Solutions</h2>
+                                <h2 class="text-3xl md:text-5xl font-black text-center text-slate-800 mb-8 drop-shadow-sm" style="font-family: 'Kaushan Script', cursive;">Our Other Services</h2>
 
                                 <!-- Stylish Grid System -->
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
@@ -429,17 +456,25 @@
         <div class="max-w-6xl mx-auto"><div id="featureGrid" class="flex flex-col gap-3 md:gap-6 mt-6"></div></div>
     </section>
 
-    <!-- Section: Live Video Demos (Restored) -->
+    <!-- Section: Live Video Demos (First Video Full Width on Mobile) -->
     <section id="demos" class="py-12 px-4 bg-white border-t border-slate-100">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-2xl md:text-4xl font-black text-center text-slate-800 mb-8 font-['Outfit']">Software Live Demo</h2>
-            <div class="grid md:grid-cols-2 gap-6 md:gap-10">
-                <div class="rounded-2xl overflow-hidden shadow-2xl border-4 border-slate-200 relative bg-black aspect-video group">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl md:text-4xl font-black text-center text-slate-800 mb-8 font-['Outfit']">About Software</h2>
+            <!-- Layout: Up/Down arrangement -->
+            <div class="flex flex-col gap-8 md:gap-12 items-center">
+                
+                <!-- Video 1: 9:16 Aspect Ratio (Instagram Reel Size) -->
+                <!-- UPDATED: 'md:max-w-sm' ensures it is restricted on desktop but takes FULL WIDTH (w-full) on mobile -->
+                <div class="w-full md:max-w-sm rounded-2xl overflow-hidden shadow-2xl border-4 border-slate-200 relative bg-black group" style="aspect-ratio: 9/16;">
                     <iframe id="v1" class="w-full h-full" allow="autoplay" loading="lazy"></iframe>
                 </div>
-                <div class="rounded-2xl overflow-hidden shadow-2xl border-4 border-slate-200 relative bg-black aspect-video group">
+
+                <!-- Video 2: 4:3 Aspect Ratio (No Change) -->
+                 <h2 class="text-2xl md:text-4xl font-black text-center text-slate-800 mb-8 font-['Outfit']">Software Live Demo</h2>
+                <div class="w-full rounded-2xl overflow-hidden shadow-2xl border-4 border-slate-200 relative bg-black group" style="aspect-ratio: 4/3;">
                     <iframe id="v2" class="w-full h-full" allow="autoplay" loading="lazy"></iframe>
                 </div>
+
             </div>
         </div>
     </section>
@@ -447,7 +482,7 @@
     <!-- Pricing Section -->
     <section id="pricing" class="py-12 md:py-20 bg-slate-900 px-0">
         <div class="max-w-7xl mx-auto text-center px-4">
-            <h2 class="text-2xl md:text-4xl font-black mb-8 md:mb-16 text-white" data-hi="प्राइसिंग प्लान चुनें" data-en="Select Pricing Plan">Select Pricing Plan</h2>
+            <h2 class="text-2xl md:text-4xl font-black mb-8 md:mb-16 text-white" data-hi="प्राइसिंग प्लान चुनें" data-en="WhatsApp Marketing Software Subscription Plan">Select Pricing Plan</h2>
         </div>
         <div id="plansGrid" class="grid grid-cols-3 gap-2 md:gap-8 px-2 md:px-8 max-w-7xl mx-auto items-stretch"></div>
     </section>
@@ -469,7 +504,7 @@
         <div class="max-w-7xl mx-auto relative z-10">
             <div class="text-center mb-16">
                 <span class="bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-bold tracking-wider uppercase text-[10px] md:text-xs px-4 py-1.5 rounded-full shadow-lg">Our Expertise</span>
-                <h2 class="text-3xl md:text-5xl font-black text-slate-800 mt-6 font-['Outfit']" data-hi="हमारी प्रीमियम सेवाएँ" data-en="Our Premium Services">Our Premium Services</h2>
+                <h2 class="text-3xl md:text-5xl font-black text-slate-800 mt-6 font-['Outfit']" data-hi="हमारी अन्य सेवाएँ" data-en="Our Other Services">Our Other Services</h2>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="detailedServicesGrid">
                 <!-- Data populated via script below -->
@@ -545,7 +580,7 @@
                     <div class="flex items-start gap-3">
                         <div class="w-10 h-10 bg-emerald-500/10 text-emerald-500 rounded-lg flex items-center justify-center shrink-0"><i class="fas fa-phone-alt"></i></div>
                         <div>
-                            <p class="text-xs text-slate-500 uppercase font-bold">Call Us</p>
+                            <p class="text-xs text-slate-500 uppercase font-bold">WhatsApp Chat Only</p>
                             <a href="tel:+917851848679" class="text-slate-300 font-bold hover:text-emerald-400 transition-colors">+91 7851848679</a>
                         </div>
                     </div>
@@ -560,7 +595,7 @@
                         <div class="w-10 h-10 bg-emerald-500/10 text-emerald-500 rounded-lg flex items-center justify-center shrink-0"><i class="fas fa-map-marker-alt"></i></div>
                         <div>
                             <p class="text-xs text-slate-500 uppercase font-bold">Our Location</p>
-                            <p class="text-slate-300 font-bold">India</p>
+                            <p class="text-slate-300 font-bold">Mathaniya Technologies –Office B-78, RIICO Commercial Area, Road No. 8, Basni 2nd Phase, Jodhpur – 342005</p>
                         </div>
                     </div>
                 </div>
@@ -576,11 +611,22 @@
     </footer>
 
     <!-- Bottom Fixed Ticker Placeholder (Bottom Ad Bar) -->
-    <div class="fixed bottom-0 left-0 w-full bg-white border-t-2 border-emerald-500 shadow-2xl z-[999] py-3 px-4 flex items-center">
-        <div class="more-service-tag">LATEST OFFER</div>
-        <div class="max-w-7xl mx-auto w-full flex justify-between items-center">
-            <p id="bottomAdText" class="text-slate-800 font-bold text-xs md:text-sm truncate pr-4">Loading today's deals...</p>
-            <a id="adBottomBtn" href="#" class="bg-emerald-600 text-white px-6 py-2 rounded-xl font-black text-[10px] md:text-xs uppercase shadow-lg flex-shrink-0">VISIT</a>
+    <!-- Added 'relative' class to parent for absolute positioning of label -->
+    <div class="fixed bottom-0 left-0 w-full bg-white border-t-2 border-emerald-500 shadow-2xl z-[999] py-2 md:py-3 px-2 md:px-4 flex items-center justify-center">
+        
+        <!-- UPDATED: Compact Floating Label (Half up/down) -->
+        <div class="offer-label-pro">
+            <i class="fas fa-bolt text-yellow-300 animate-pulse"></i> LATEST OFFER
+        </div>
+
+        <div class="max-w-7xl mx-auto w-full flex items-center justify-between">
+            
+            <div class="flex items-center overflow-hidden flex-1 mr-2">
+                
+                <p id="bottomAdText" class="text-slate-800 font-bold text-xs md:text-sm truncate pl-2">Loading today's deals...</p>
+            </div>
+
+            <a id="adBottomBtn" href="#" class="bg-emerald-600 text-white px-5 py-2 rounded-xl font-black text-[10px] md:text-xs uppercase shadow-lg flex-shrink-0 hover:bg-emerald-700 transition-colors">VISIT</a>
         </div>
     </div>
     
@@ -592,11 +638,23 @@
             whatsappNumber: "917851848679",
             video1: "https://drive.google.com/file/d/1IDrSTriWCn_x8-jOTgPW_jzO2zuMLLfX/preview", 
             video2: "https://drive.google.com/file/d/1WIXvqa1y0FZFPd4awUeBWSleyF2IXj0R/preview",
+            // UPDATED: Professional Icons and Clean Text for Ticker
             tickerAds: [
-                "🚀 Bulk WhatsApp Sender - Send 1000s of messages", "🤖 24/7 AI Chatbot for Business", "👥 Extract Data from Groups", "✅ Active Number Filtering", 
-                "🛡️ Anti-Block Technology Enabled", "📅 Message Scheduling", "👆 Interactive Buttons", "📸 Media Marketing Tools", 
-                "💼 Official WhatsApp API", "✅ Green Tick Assistance", "📈 Lead Generation Tools", "🔗 CRM Integration", 
-                "🎧 Multi-Agent Access", "🎯 Advanced Retargeting", "💡 Growth Marketing Strategy"
+                { icon: "fa-paper-plane", text: "Bulk WhatsApp Sender" },
+                { icon: "fa-robot", text: "24/7 AI Chatbot Automation" },
+                { icon: "fa-database", text: "Group Data Extractor" },
+                { icon: "fa-filter", text: "Active Number Filter" },
+                { icon: "fa-shield-halved", text: "Anti-Block Technology" },
+                { icon: "fa-calendar-check", text: "Smart Campaign Scheduling" },
+                { icon: "fa-hand-pointer", text: "Interactive Button Messages" },
+                { icon: "fa-photo-video", text: "Multimedia Marketing Tools" },
+                { icon: "fa-code-branch", text: "Official WhatsApp API" },
+                { icon: "fa-check-circle", text: "Green Tick Verification Support" },
+                { icon: "fa-bullseye", text: "Targeted Lead Generation" },
+                { icon: "fa-users-cog", text: "CRM Integration Ready" },
+                { icon: "fa-headset", text: "Multi-Agent Support System" },
+                { icon: "fa-sync-alt", text: "Advanced Retargeting" },
+                { icon: "fa-chess-knight", text: "Strategic Growth Marketing" }
             ],
             features: [
                 { icon: "fa-paper-plane", en: "Bulk Sender", line1En: "Send thousands of msgs", moreEn: "Excel support\nPersonalized msgs\nMultimedia\nReports" },
@@ -716,7 +774,13 @@
                 el.innerText = currentLang === 'hi' ? (el.getAttribute('data-hi') || el.getAttribute('data-en')) : el.getAttribute('data-en');
             });
 
-            document.getElementById('tickerContent').innerHTML = SITE_CONFIG.tickerAds.join(' &nbsp;&nbsp;&nbsp; ✦ &nbsp;&nbsp;&nbsp; ');
+            // UPDATED: Ticker Rendering with Professional Icons & Font
+            const tickerHtml = SITE_CONFIG.tickerAds.map(item => `
+                <span class="inline-flex items-center mx-6 text-sm md:text-lg font-black font-['Outfit'] tracking-wider text-slate-800 uppercase hover:text-emerald-600 transition-colors cursor-default" style="text-shadow: 1px 1px 0px rgba(0,0,0,0.05);">
+                    <i class="fas ${item.icon} text-emerald-500 mr-2 text-xl drop-shadow-sm"></i> ${item.text}
+                </span>`
+            ).join('');
+            document.getElementById('tickerContent').innerHTML = tickerHtml + tickerHtml;
 
             const fGrid = document.getElementById('featureGrid');
             fGrid.innerHTML = SITE_CONFIG.features.map(f => {
@@ -753,7 +817,7 @@
 
             const services = [
                 { t: "Digital Marketing", c: "blue", i: "fa-bullhorn", p: ["SEO Optimization", "Social Media Ads", "Email Marketing", "Lead Generation"] },
-                { t: "Content & Creative", c: "orange", i: "fa-lightbulb", p: ["Strategy Planning", "Content Writing", "Video Creation", "Real Editing"] },
+                { t: "Content & Creative", c: "orange", i: "fa-lightbulb", p: ["Strategy Planning", "Content Writing", "Video Creation", "Reel Editing"] },
                 { t: "Social Media Mgmt", c: "pink", i: "fa-share-alt", p: ["Account Management", "Content Scheduling", "Reels & Stories", "Community Growth"] },
                 { t: "Graphic Design", c: "teal", i: "fa-palette", p: ["Logo & Branding", "Posters & Flyers", "App Graphics", "Business ID"] },
                 { t: "Website & Tech", c: "indigo", i: "fa-globe", p: ["Web Development", "Landing Pages", "CRM Automation", "Analytics Setup"] },
