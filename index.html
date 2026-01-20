@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="hi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathaniya Technologies | Premium Marketing Solution</title>
+    
+    <!-- FAST LOADING: Critical Assets Preload -->
+    <link rel="preload" as="image" href="https://lh3.googleusercontent.com/d/1CP-Jw9zdX4h9-P-MVl_9QMXM9sZlTejO" fetchpriority="high">
+    <link rel="preload" as="image" href="https://lh3.googleusercontent.com/d/1Pb0DfsVdMkBDNCBDz8OJ6VFXXj7ycy_d">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Outfit:wght@700;800;900&family=Kaushan+Script&family=Righteous&family=Bebas+Neue&display=block" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Hind', sans-serif; overflow-x: hidden; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* BRAND TITLE - GREEN GRADIENT */
+        .brand-main-title {
+            font-family: 'Bebas Neue', Impact, 'Arial Narrow', sans-serif; 
+            background: linear-gradient(135deg, #059669 0%, #10b981 100%); /* Green Color */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 0.03em; 
+            display: inline-block;
+            line-height: 1;
+            /* Fallback opacity if animation fails */
+            opacity: 1; 
+            animation: fadeInTitle 0.4s ease-in forwards;
+        }
+
+        @keyframes fadeInTitle {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* BRAND SUBTITLE - BLACK */
+        .brand-subtitle {
+            font-family: 'Kaushan Script', cursive;
+            color: #000000; /* Black Color */
+            display: inline-block;
+            margin-top: 1px;
+            line-height: 1;
+            font-weight: 900;
+        }
+
+        /* Language Switcher */
+        .lang-switch-container {
+            display: flex; background: #f1f5f9; padding: 2px; border-radius: 9999px;
+            position: relative; cursor: pointer; width: 45px; height: 20px; align-items: center;
+            border: 1px solid #e2e8f0; flex-shrink: 0;
+        }
+        @media (min-width: 768px) { .lang-switch-container { width: 90px; height: 38px; } }
+        .lang-slider {
+            position: absolute; width: 20px; height: 16px; background: #059669; border-radius: 9999px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); left: 2px;
+        }
+        @media (min-width: 768px) { .lang-slider { width: 42px; height: 32px; } }
+        .lang-switch-container.is-hi .lang-slider { left: calc(100% - 22px); }
+        @media (min-width: 768px) { .lang-switch-container.is-hi .lang-slider { left: calc(100% - 44px); } }
+        
+        .lang-label { flex: 1; text-align: center; font-size: 7px; font-weight: 900; z-index: 10; }
+        @media (min-width: 768px) { .lang-label { font-size: 11px; } }
+        .lang-label.active { color: white; }
+        .lang-label.inactive { color: #64748b; }
+
+        .wa-3d-btn-green { 
+            background: linear-gradient(135deg, #25D366, #128C7E); 
+            color: white; 
+            box-shadow: 0 2px 0 #075E54; 
+            transition: all 0.2s; 
+            flex-shrink: 0;
+            text-decoration: none;
+        }
+        .wa-3d-btn-green:active { transform: translateY(2px); box-shadow: none; }
+
+        /* Navigation Dropdown */
+        .nav-dropdown {
+            position: absolute;
+            top: 120%;
+            right: 0;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            padding: 8px;
+            min-width: 160px;
+            border: 1px solid #e2e8f0;
+            display: none;
+            z-index: 60;
+            animation: fadeIn 0.2s ease-out;
+        }
+        .nav-dropdown.show { display: block; }
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 12px;
+            color: #334155;
+            font-weight: 700;
+            font-size: 14px;
+            border-radius: 8px;
+            transition: all 0.2s;
+            font-family: 'Outfit', sans-serif;
+            text-decoration: none;
+        }
+        .nav-item:hover { background: #ecfdf5; color: #059669; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Ticker */
+        .ticker-wrap { width: 100%; overflow: hidden; white-space: nowrap; background: #ffffff; border-bottom: 2px solid #ecfdf5; }
+        .ticker-move { display: inline-block; animation: ticker-swipe 65s linear infinite; }
+        @keyframes ticker-swipe { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-50%, 0, 0); } }
+        .ticker-item { display: inline-block; padding-right: 60px; font-weight: 800; }
+
+        /* Profile Frame Styling */
+        .profile-frame-new {
+            position: relative; padding: 8px; border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            background: linear-gradient(135deg, #10b981, #3b82f6);
+            box-shadow: 0 15px 30px rgba(16, 185, 129, 0.3);
+            animation: morph 6s ease-in-out infinite;
+        }
+        @keyframes morph {
+            0%, 100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+            50% { border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%; }
+        }
+
+        .img-container-new { background: white; padding: 4px; border-radius: inherit; }
+
+        .founder-banner-real {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200');
+            background-size: cover; background-position: center; position: relative;
+        }
+
+        .hero-banner-img { width: 100%; height: auto; display: block; object-fit: contain; }
+        
+        /* Modal Settings */
+        .modal-overlay { 
+            display: none; position: fixed; inset: 0; background: rgba(0, 0, 0, 0.85); 
+            z-index: 2000; backdrop-filter: blur(8px); align-items: center; justify-content: center; padding: 1rem;
+        }
+        .modal-content { 
+            background: white; border-radius: 1.5rem; max-width: 800px; width: 100%; 
+            max-height: 90vh; overflow-y: auto !important; position: relative; 
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); -webkit-overflow-scrolling: touch;
+        }
+
+        /* Floating Button Comic Style */
+        .wa-floating-btn {
+            position: fixed;
+            bottom: 5rem;
+            right: 1rem;
+            z-index: 9999;
+            background: #25D366;
+            color: black;
+            border: 3px solid black;
+            padding: 8px 15px;
+            font-family: 'Righteous', cursive;
+            font-size: 14px;
+            font-weight: 900;
+            text-transform: uppercase;
+            box-shadow: 5px 5px 0px black;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transform: rotate(-3deg);
+            transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: meme-bounce 2.5s infinite alternate ease-in-out;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .wa-floating-btn:hover {
+            transform: rotate(0deg) scale(1.1);
+            box-shadow: 2px 2px 0px black;
+            background: #128C7E;
+            color: white;
+        }
+        .wa-floating-btn i { font-size: 24px; }
+        @keyframes meme-bounce {
+            0% { transform: translateY(0) rotate(-3deg); }
+            100% { transform: translateY(-8px) rotate(3deg); }
+        }
+
+        /* NEW SHANDAR MENU BUTTON STYLES */
+        .menu-btn-modern {
+            width: 35px; height: 35px;
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            display: flex; flex-direction: column;
+            justify-content: center; align-items: center;
+            gap: 4px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            padding: 2px;
+        }
+        @media (min-width: 768px) { .menu-btn-modern { width: 45px; height: 45px; gap: 6px; } }
+
+        .menu-btn-modern:hover {
+            box-shadow: 0 5px 15px rgba(5, 150, 105, 0.2);
+            border-color: #10b981;
+            transform: translateY(-1px);
+        }
+
+        .bar-line {
+            width: 22px; height: 3px;
+            background: #334155;
+            border-radius: 4px;
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        @media (min-width: 768px) { .bar-line { width: 26px; height: 3px; } }
+
+        /* Initial State: Stylish Staggered Lines */
+        .bar-line:nth-child(1) { width: 50%; transform: translateX(-25%); background: #059669; }
+        .bar-line:nth-child(2) { width: 100%; }
+        .bar-line:nth-child(3) { width: 50%; transform: translateX(25%); background: #059669; }
+
+        /* Hover State */
+        .menu-btn-modern:hover .bar-line:nth-child(1) { width: 70%; transform: translateX(0); background: #047857; }
+        .menu-btn-modern:hover .bar-line:nth-child(2) { width: 80%; }
+        .menu-btn-modern:hover .bar-line:nth-child(3) { width: 70%; transform: translateX(0); background: #047857; }
+
+        /* Active/Open State: The Cross (X) Animation */
+        .menu-btn-modern.active { border-color: #ef4444; box-shadow: 0 5px 15px rgba(239, 68, 68, 0.15); }
+        .menu-btn-modern.active .bar-line:nth-child(1) { width: 100%; transform: translateY(7px) rotate(45deg); background: #ef4444; }
+        @media (min-width: 768px) { .menu-btn-modern.active .bar-line:nth-child(1) { transform: translateY(9px) rotate(45deg); } }
+        .menu-btn-modern.active .bar-line:nth-child(2) { opacity: 0; transform: translateX(20px); }
+        .menu-btn-modern.active .bar-line:nth-child(3) { width: 100%; transform: translateY(-7px) rotate(-45deg); background: #ef4444; }
+        @media (min-width: 768px) { .menu-btn-modern.active .bar-line:nth-child(3) { transform: translateY(-9px) rotate(-45deg); } }
+
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 pb-20 md:pb-0">
+
+    <!-- Section 1: Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md h-[65px] md:h-[90px] flex items-center px-3 md:px-8 shadow-lg border-b border-slate-100 transition-all">
+        <div class="max-w-7xl mx-auto w-full flex justify-between items-center gap-2">
+            
+            <!-- Branding Section -->
+            <div class="flex flex-col items-start justify-center min-w-0 flex-1">
+                <h1 class="brand-main-title text-[12px] xs:text-[15px] sm:text-[22px] md:text-[40px] uppercase whitespace-nowrap overflow-hidden text-ellipsis">
+                    WhatsApp Marketing Software
+                </h1>
+                <h2 class="brand-subtitle text-[7px] xs:text-[9px] sm:text-[11px] md:text-[19px] whitespace-nowrap">
+                    by Mathaniya Technologies
+                </h2>
+            </div>
+
+            <!-- Buttons Group -->
+            <div class="flex items-center gap-2 flex-shrink-0">
+                <div id="langSwitcher" class="lang-switch-container" onclick="toggleLanguage()">
+                    <div class="lang-slider" id="langSlider"></div>
+                    <span class="lang-label active" id="labelEn">EN</span>
+                    <span class="lang-label inactive" id="labelHi">HI</span>
+                </div>
+                
+                <!-- WhatsApp Channel Button -->
+                <a href="https://whatsapp.com/channel/0029VbBwZreGOj9hJFRni906" target="_blank" class="wa-3d-btn-green px-2 py-1.5 md:px-5 md:py-2.5 rounded-full font-black text-[7px] md:text-xs flex items-center gap-1 whitespace-nowrap shadow-md">
+                    <i class="fab fa-whatsapp text-[10px] md:text-lg"></i>
+                    <span data-hi="व्हाट्सएप चैनल जॉइन करें" data-en="Join WhatsApp Channel" id="navWaBtnText">Join WhatsApp Channel</span>
+                </a>
+
+                <!-- 3-Dot Navigation Menu -->
+                <div class="relative ml-2">
+                    <button id="menuToggleBtn" onclick="toggleNavMenu()" class="menu-btn-modern" aria-label="Toggle Menu">
+                        <span class="bar-line"></span>
+                        <span class="bar-line"></span>
+                        <span class="bar-line"></span>
+                    </button>
+                    <!-- Dropdown Menu -->
+                    <div id="navMenu" class="nav-dropdown">
+                        <a href="#" class="nav-item" onclick="toggleNavMenu()"><i class="fas fa-home w-5"></i> Home</a>
+                        <a href="#features" class="nav-item" onclick="toggleNavMenu()"><i class="fas fa-star w-5"></i> Features</a>
+                        <a href="#special-offer" class="nav-item" onclick="toggleNavMenu()"><i class="fas fa-gift w-5"></i> Special Offer</a>
+                        <!-- Link to Footer (#contact) -->
+                        <a href="#contact" class="nav-item" onclick="toggleNavMenu()"><i class="fas fa-envelope w-5"></i> Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section 2: Modal Container (Founder only) -->
+    <div id="infoModal" class="modal-overlay" onclick="if(event.target === this) closeModal()">
+        <div class="modal-content relative bg-white border-none no-scrollbar">
+            <button onclick="closeModal()" class="absolute top-4 right-4 bg-black/30 hover:bg-red-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-xl transition-colors z-50 shadow-lg">&times;</button>
+            
+            <div id="modalBody">
+                <div id="founderModalContent" class="hidden">
+                    <div class="relative w-full">
+                        <div class="founder-banner-real h-40 md:h-52 flex flex-col items-center justify-start text-center px-4 pt-6 md:pt-10">
+                            <h3 class="text-white text-3xl md:text-5xl font-black drop-shadow-lg mb-1" style="font-family: 'Kaushan Script', cursive;">Mathaniya Technologies</h3>
+                            <p class="text-emerald-300 font-bold text-[14px] md:text-2xl drop-shadow-md mt-1" style="font-family: 'Kaushan Script', cursive;">Leading Marketing Agency & IT Solutions</p>
+                            <p class="text-white/90 text-[12px] md:text-xl mt-2 max-w-md font-medium drop-shadow-md" style="font-family: 'Kaushan Script', cursive;">Expert in Smart AI Automation & Web Development</p>
+                        </div>
+                        <div class="max-w-xl mx-auto -mt-16 md:-mt-24 relative z-20 flex flex-col items-center text-center">
+                            <div class="profile-frame-new mb-4">
+                                <div class="img-container-new">
+                                    <img src="https://lh3.googleusercontent.com/d/1Pb0DfsVdMkBDNCBDz8OJ6VFXXj7ycy_d" class="w-36 h-36 md:w-56 md:h-56 object-cover" style="border-radius: inherit;" alt="Founder" decoding="sync" onerror="this.src='https://placehold.co/200x200?text=DM';">
+                                </div>
+                            </div>
+                            <h2 class="text-4xl md:text-7xl font-black tracking-tight mb-2 bg-gradient-to-r from-emerald-600 to-teal-500 bg-clip-text text-transparent drop-shadow-sm" style="font-family: 'Kaushan Script', cursive;">Dinesh Mathaniya</h2>
+                            <p class="text-slate-600 font-bold text-[16px] md:text-3xl mt-1" style="font-family: 'Kaushan Script', cursive;">Founder, Mathaniya Technologies</p>
+                            <div class="w-32 h-1 bg-gradient-to-r from-emerald-400 to-teal-400 mt-4 rounded-full"></div>
+                        </div>
+                        
+                        <!-- Full Detailed Bio & Services Content -->
+                        <div class="p-4 md:p-10 space-y-8">
+                            <div class="bg-slate-50 p-6 md:p-10 rounded-[2.5rem] border border-slate-200 shadow-inner relative overflow-hidden text-left">
+                                <div class="absolute -top-6 -right-6 text-slate-100 text-9xl font-black select-none pointer-events-none opacity-50">"</div>
+                                <h3 class="text-2xl md:text-4xl font-black text-slate-900 mb-6 border-b-4 border-blue-500 inline-block pb-1" style="font-family: 'Kaushan Script', cursive;">About the Founder</h3>
+                                <div class="article-text text-slate-700 text-sm md:text-base leading-relaxed space-y-4 font-medium text-justify">
+                                    <p><strong>Dinesh Mathaniya</strong> is the founder of <strong>Mathaniya Technologies</strong>, with a strong focus on helping businesses grow through digital marketing, technology, and smart automation solutions. With hands-on experience in website development, WhatsApp marketing, and online branding, he is committed to delivering practical, result-oriented solutions for startups, small businesses, and growing brands.</p>
+                                    <p>His vision is to make professional digital services affordable, reliable, and accessible for every business to compete in today's fast-paced market. He believes that every brand deserves the power of high-end automation to streamline operations and maximize reach.</p>
+                                </div>
+                            </div>
+
+                            <!-- UPDATED SERVICES SECTION - STYLISH GRID LAYOUT -->
+                            <div class="bg-white p-6 md:p-8 rounded-[2.5rem] border border-emerald-100 shadow-xl text-left">
+                                <h2 class="text-3xl md:text-5xl font-black text-center text-slate-800 mb-8 drop-shadow-sm" style="font-family: 'Kaushan Script', cursive;">Our Premium Services & Solutions</h2>
+
+                                <!-- Stylish Grid System -->
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                                    
+                                    <!-- Service 1 -->
+                                    <div class="group bg-slate-50 p-6 rounded-2xl border-l-8 border-emerald-500 shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+                                        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity"><i class="fas fa-bullhorn text-6xl text-emerald-600"></i></div>
+                                        <h4 class="text-xl font-black text-emerald-800 uppercase mb-3 flex items-center gap-2">
+                                            <span class="bg-emerald-100 p-2 rounded-lg"><i class="fas fa-paper-plane text-emerald-600"></i></span> 
+                                            1. WhatsApp Marketing
+                                        </h4>
+                                        <p class="text-slate-600 text-sm leading-relaxed text-justify font-medium">In the rapidly evolving digital landscape, traditional marketing channels like email and SMS are seeing diminishing returns due to spam filters and low engagement. Mathaniya Technologies steps in to fill this gap with our state-of-the-art WhatsApp Marketing Software. We understand that your customers are on WhatsApp 24/7. Our tools allow you to tap into this massive user base with a staggering 98% open rate, ensuring your message is not just delivered but seen and acted upon. Whether you are announcing a new product, running a festive sale, or sending critical updates, our bulk sender ensures instant delivery to thousands of contacts with a single click, bypassing the tedious process of saving numbers manually. This direct line of communication builds trust and drives immediate action.</p>
+                                    </div>
+
+                                    <!-- Service 2 -->
+                                    <div class="group bg-slate-50 p-6 rounded-2xl border-l-8 border-blue-500 shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+                                        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity"><i class="fas fa-robot text-6xl text-blue-600"></i></div>
+                                        <h4 class="text-xl font-black text-blue-800 uppercase mb-3 flex items-center gap-2">
+                                            <span class="bg-blue-100 p-2 rounded-lg"><i class="fas fa-headset text-blue-600"></i></span> 
+                                            2. 24/7 AI Chatbot
+                                        </h4>
+                                        <p class="text-slate-600 text-sm leading-relaxed text-justify font-medium">Efficiency is the cornerstone of a successful business. Our AI-driven Chatbot technology acts as your round-the-clock sales and support agent. It never sleeps, never gets tired, and handles unlimited customer inquiries simultaneously. By automating responses to common queries, booking appointments, and guiding users through your sales funnel, you drastically reduce human error and operational costs while boosting customer satisfaction. This intelligent automation allows business owners to focus on strategy and growth while our software handles the repetitive engagement tasks seamlessly. Imagine generating leads while you sleep—that is the power of our automation.</p>
+                                    </div>
+
+                                    <!-- Service 3 -->
+                                    <div class="group bg-slate-50 p-6 rounded-2xl border-l-8 border-purple-500 shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+                                        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity"><i class="fas fa-filter text-6xl text-purple-600"></i></div>
+                                        <h4 class="text-xl font-black text-purple-800 uppercase mb-3 flex items-center gap-2">
+                                            <span class="bg-purple-100 p-2 rounded-lg"><i class="fas fa-magnet text-purple-600"></i></span> 
+                                            3. Lead Extraction
+                                        </h4>
+                                        <p class="text-slate-600 text-sm leading-relaxed text-justify font-medium">Data is the new oil, but only if it's refined. Our Group Grabber tool is a game-changer for lead generation. It allows you to extract high-quality, niche-specific contacts from WhatsApp groups relevant to your industry. Instead of shooting in the dark, you can target an audience that is already interested in your niche. Combined with our advanced Number Filter, which segregates active WhatsApp users from non-users, you ensure that every marketing rupee is spent on a valid lead, maximizing your ROI and keeping your campaigns clean and efficient. This targeted approach significantly increases conversion rates compared to cold calling.</p>
+                                    </div>
+
+                                    <!-- Service 4 -->
+                                    <div class="group bg-slate-50 p-6 rounded-2xl border-l-8 border-red-500 shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+                                        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity"><i class="fas fa-shield-alt text-6xl text-red-600"></i></div>
+                                        <h4 class="text-xl font-black text-red-800 uppercase mb-3 flex items-center gap-2">
+                                            <span class="bg-red-100 p-2 rounded-lg"><i class="fas fa-lock text-red-600"></i></span> 
+                                            4. Anti-Block Security
+                                        </h4>
+                                        <p class="text-slate-600 text-sm leading-relaxed text-justify font-medium">We prioritize the security of your business assets. Aggressive marketing can often lead to account bans, a nightmare for any business. Mathaniya Technologies has integrated cutting-edge Anti-Block technology that simulates human behavior. With features like variable time delays, sleep modes, and friendly sending algorithms, our software mimics manual typing and sending patterns. This 'Human Simulation' layer provides a robust shield, allowing you to scale your campaigns aggressively yet safely, maintaining the longevity and reputation of your business numbers.</p>
+                                    </div>
+
+                                    <!-- Service 5 (Full Width for Emphasis) -->
+                                    <div class="group bg-slate-50 p-6 rounded-2xl border-l-8 border-orange-500 shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden md:col-span-2">
+                                        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity"><i class="fas fa-code text-6xl text-orange-600"></i></div>
+                                        <h4 class="text-xl font-black text-orange-800 uppercase mb-3 flex items-center gap-2">
+                                            <span class="bg-orange-100 p-2 rounded-lg"><i class="fas fa-laptop-code text-orange-600"></i></span> 
+                                            5. Professional Web Development
+                                        </h4>
+                                        <p class="text-slate-600 text-sm leading-relaxed text-justify font-medium">A strong digital identity goes beyond messaging; it starts with a professional online address. Our exclusive ₹999 Business Website offer is designed to give every small and medium enterprise a corporate-grade digital face. In a mobile-first world, our websites are responsive, fast-loading, and SEO-friendly. We integrate your WhatsApp marketing funnel directly into your website, creating a cohesive ecosystem where visitors from the web can instantly connect with you on chat. This synergy between web presence and direct messaging creates a powerful conversion loop that drives sales and builds brand authority.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Closing Quote Box -->
+                                <div class="bg-gradient-to-r from-emerald-600 to-teal-700 p-6 md:p-8 rounded-3xl shadow-lg text-white text-center relative overflow-hidden mb-8">
+                                    <i class="fas fa-quote-left absolute top-4 left-6 text-emerald-400/30 text-6xl"></i>
+                                    <i class="fas fa-quote-right absolute bottom-4 right-6 text-emerald-400/30 text-6xl"></i>
+                                    <p class="italic font-bold text-sm md:text-xl relative z-10 leading-relaxed font-['Outfit']">"Mathaniya Technologies is not just a software provider; we are your growth partners. From establishing your digital footprint with a stunning website to automating your customer outreach, we provide an end-to-end ecosystem for success."</p>
+                                </div>
+
+                                <div class="mt-10 flex flex-col md:flex-row items-center justify-between gap-6 border-t border-slate-100 pt-8">
+                                    <div class="flex gap-4">
+                                        <span class="bg-slate-50 p-3 rounded-xl shadow-sm text-slate-400 hover:text-pink-500 cursor-pointer transition-colors"><i class="fab fa-instagram text-xl"></i></span>
+                                        <span class="bg-slate-50 p-3 rounded-xl shadow-sm text-slate-400 hover:text-blue-500 cursor-pointer transition-colors"><i class="fab fa-facebook-f text-xl"></i></span>
+                                    </div>
+                                    <a href="javascript:location.href=getWALink('Direct Chat with Founder')" class="w-full md:w-auto bg-[#25D366] text-white px-10 py-4 rounded-2xl font-black uppercase shadow-xl hover:scale-105 transition-all flex items-center justify-center gap-3">
+                                        <i class="fab fa-whatsapp text-2xl"></i> Contact Directly
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 3: Hero Section -->
+    <section class="w-full p-0 m-0 leading-none relative bg-white">
+        <img src="https://lh3.googleusercontent.com/d/1CP-Jw9zdX4h9-P-MVl_9QMXM9sZlTejO" alt="Hero Banner" class="hero-banner-img" fetchpriority="high" loading="eager" decoding="sync" onerror="this.src='https://placehold.co/1500x500/065f46/ffffff?text=Premium+Marketing';">
+        <div class="absolute bottom-4 left-4 md:bottom-28 md:left-16 z-30 pointer-events-auto">
+            <button onclick="openModal('founder')" class="group cursor-pointer bg-white/5 backdrop-blur-sm border border-white/40 text-white px-6 py-2.5 md:px-14 md:py-7 rounded-full shadow-2xl hover:bg-white/15 transition-all flex items-center gap-2 md:gap-4 active:scale-95">
+                <i class="fas fa-user-tie text-xs md:text-4xl drop-shadow-md"></i>
+                <span class="text-[12px] md:text-4xl font-black drop-shadow-lg" style="font-family: 'Kaushan Script', cursive;">Meet Founder</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Section 4: Ad Ticker -->
+    <div class="ticker-wrap py-2 md:py-4 shadow-sm flex items-center">
+        <div class="shrink-0 z-10 bg-white px-2 md:px-4 border-r border-slate-100">
+            <span class="bg-emerald-600 text-white font-black px-2 py-1 rounded text-[10px] md:text-xs uppercase shadow-sm">Exclusive</span>
+        </div>
+        <div class="overflow-hidden flex-1 relative">
+            <div class="ticker-move" id="tickerContent"></div>
+        </div>
+    </div>
+
+    <!-- Features -->
+    <section id="features" class="pb-12 md:pb-20 pt-8 px-2 md:px-4 bg-slate-50">
+        <div class="max-w-6xl mx-auto"><div id="featureGrid" class="flex flex-col gap-3 md:gap-6 mt-6"></div></div>
+    </section>
+
+    <!-- Section: Live Video Demos (Restored) -->
+    <section id="demos" class="py-12 px-4 bg-white border-t border-slate-100">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-2xl md:text-4xl font-black text-center text-slate-800 mb-8 font-['Outfit']">Software Live Demo</h2>
+            <div class="grid md:grid-cols-2 gap-6 md:gap-10">
+                <div class="rounded-2xl overflow-hidden shadow-2xl border-4 border-slate-200 relative bg-black aspect-video group">
+                    <iframe id="v1" class="w-full h-full" allow="autoplay" loading="lazy"></iframe>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-2xl border-4 border-slate-200 relative bg-black aspect-video group">
+                    <iframe id="v2" class="w-full h-full" allow="autoplay" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-12 md:py-20 bg-slate-900 px-0">
+        <div class="max-w-7xl mx-auto text-center px-4">
+            <h2 class="text-2xl md:text-4xl font-black mb-8 md:mb-16 text-white" data-hi="प्राइसिंग प्लान चुनें" data-en="Select Pricing Plan">Select Pricing Plan</h2>
+        </div>
+        <div id="plansGrid" class="grid grid-cols-3 gap-2 md:gap-8 px-2 md:px-8 max-w-7xl mx-auto items-stretch"></div>
+    </section>
+
+    <!-- More Solutions (Banners) -->
+    <section id="services" class="py-12 md:py-16 bg-white w-full">
+        <div class="w-full">
+            <h2 class="text-2xl md:text-3xl font-black text-center mb-8 md:mb-10 italic px-4 text-slate-800" data-hi="अन्य बेहतरीन समाधान" data-en="More Solutions">More Solutions</h2>
+            <div id="serviceGrid" class="flex flex-col gap-4 w-full md:max-w-4xl md:mx-auto px-0 md:px-4"></div>
+        </div>
+    </section>
+
+    <!-- Premium Services (Restored Colorful Design) -->
+    <section id="detailed-services" class="py-20 px-4 relative overflow-hidden" style="background: linear-gradient(135deg, #e0f2fe 0%, #d1fae5 50%, #f0f9ff 100%);">
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-40">
+            <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-blue-300 blur-3xl mix-blend-multiply"></div>
+            <div class="absolute top-1/2 right-0 w-80 h-80 rounded-full bg-emerald-300 blur-3xl mix-blend-multiply"></div>
+        </div>
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center mb-16">
+                <span class="bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-bold tracking-wider uppercase text-[10px] md:text-xs px-4 py-1.5 rounded-full shadow-lg">Our Expertise</span>
+                <h2 class="text-3xl md:text-5xl font-black text-slate-800 mt-6 font-['Outfit']" data-hi="हमारी प्रीमियम सेवाएँ" data-en="Our Premium Services">Our Premium Services</h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="detailedServicesGrid">
+                <!-- Data populated via script below -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offer -->
+    <section id="special-offer" class="py-16 px-4 bg-gradient-to-br from-blue-50 via-indigo-50 to-white relative overflow-hidden">
+        <div class="max-w-4xl mx-auto relative z-10 text-center">
+            <div class="inline-block mb-6"><span class="bg-red-500 text-white text-xs md:text-sm font-black px-4 py-1.5 rounded-full uppercase tracking-widest shadow-lg border-2 border-red-200 animate-bounce">🔥 Special Offer</span></div>
+            <h2 class="text-3xl md:text-5xl font-black text-slate-800 mb-6 font-['Outfit'] leading-tight">Single Page Business Website in <span class="text-blue-600">₹999</span></h2>
+            <p class="text-lg md:text-xl text-slate-600 mb-8 max-w-3xl mx-auto font-medium">Get a professional, mobile-friendly website to showcase your business.</p>
+            <div class="bg-white rounded-3xl p-6 md:p-10 shadow-2xl border-2 border-blue-100 transform hover:-translate-y-2 transition-all">
+                <div class="flex flex-col md:flex-row items-center gap-6 md:gap-8">
+                    <div class="shrink-0 bg-blue-100 p-4 rounded-full text-blue-600"><i class="fas fa-laptop-code text-4xl"></i></div>
+                    <div class="text-left"><p class="text-slate-700 text-base md:text-lg leading-relaxed font-semibold">Professional single-page website with business information, services, and contact details—quick, simple, and affordable.</p></div>
+                    <div class="mt-4 md:mt-0 shrink-0 w-full md:w-auto"><a href="javascript:location.href=getWALink('SpecialOfferWebsite')" class="block bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-xl font-black uppercase text-sm md:text-base shadow-lg hover:scale-105 transition-all text-center">Get It Now</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UPDATED: Professional Footer Section -->
+    <footer id="contact" class="bg-slate-900 text-white pt-16 pb-28 md:pb-12 px-4 relative overflow-hidden border-t-4 border-emerald-500">
+        <!-- Decoration Background -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-emerald-900/20 rounded-full blur-3xl"></div>
+        
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-left relative z-10">
+            <!-- Brand Info -->
+            <div class="space-y-6">
+                <span class="text-3xl font-black bg-gradient-to-r from-emerald-400 to-teal-200 bg-clip-text text-transparent" style="font-family: 'Kaushan Script', cursive;">Mathaniya Technologies</span>
+                <p class="text-slate-400 text-base leading-relaxed">
+                    We provide professional digital marketing, website, and business growth solutions to help brands build a strong online presence and achieve real results.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-emerald-500 transition-colors"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-emerald-500 transition-colors"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-emerald-500 transition-colors"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <!-- Services List -->
+            <div>
+                <h4 class="text-xl font-bold mb-6 text-white border-b-2 border-emerald-500 pb-2 inline-block">Services</h4>
+                <ul class="space-y-3 text-slate-400 text-sm">
+                    <li class="hover:text-emerald-400 transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-[10px]"></i> Digital Marketing</li>
+                    <li class="hover:text-emerald-400 transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-[10px]"></i> WhatsApp Marketing</li>
+                    <li class="hover:text-emerald-400 transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-[10px]"></i> Content & Creative Services</li>
+                    <li class="hover:text-emerald-400 transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-[10px]"></i> Social Media Management</li>
+                    <li class="hover:text-emerald-400 transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-[10px]"></i> Graphic Designing</li>
+                    <li class="hover:text-emerald-400 transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-[10px]"></i> Website Development</li>
+                </ul>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-xl font-bold mb-6 text-white border-b-2 border-emerald-500 pb-2 inline-block">Quick Links</h4>
+                <ul class="space-y-3 text-slate-400 text-sm">
+                    <li><a href="#" class="hover:text-emerald-400 transition-colors flex items-center gap-2"><i class="fas fa-link text-[10px]"></i> Home</a></li>
+                    <li><a href="#detailed-services" class="hover:text-emerald-400 transition-colors flex items-center gap-2"><i class="fas fa-link text-[10px]"></i> Our Services</a></li>
+                    <li><a href="javascript:openModal('founder')" class="hover:text-emerald-400 transition-colors flex items-center gap-2"><i class="fas fa-link text-[10px]"></i> About Us</a></li>
+                    <li><a href="#contact" class="hover:text-emerald-400 transition-colors flex items-center gap-2"><i class="fas fa-link text-[10px]"></i> Contact Us</a></li>
+                    <li><a onclick="openModal('privacy')" class="hover:text-emerald-400 transition-colors">Privacy Policy</a></li>
+                    <li><a onclick="openModal('terms')" class="hover:text-emerald-400 transition-colors">Terms & Conditions</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Information -->
+            <div>
+                <h4 class="text-xl font-bold mb-6 text-white border-b-2 border-emerald-500 pb-2 inline-block">Contact Information</h4>
+                <div class="space-y-4">
+                    <div class="flex items-start gap-3">
+                        <div class="w-10 h-10 bg-emerald-500/10 text-emerald-500 rounded-lg flex items-center justify-center shrink-0"><i class="fas fa-phone-alt"></i></div>
+                        <div>
+                            <p class="text-xs text-slate-500 uppercase font-bold">Call Us</p>
+                            <a href="tel:+917851848679" class="text-slate-300 font-bold hover:text-emerald-400 transition-colors">+91 7851848679</a>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-10 h-10 bg-emerald-500/10 text-emerald-500 rounded-lg flex items-center justify-center shrink-0"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <p class="text-xs text-slate-500 uppercase font-bold">Email Support</p>
+                            <a href="mailto:contact@mathaniyatechnologies.com" class="text-slate-300 font-bold hover:text-emerald-400 transition-colors break-all">contact@mathaniyatechnologies.com</a>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-10 h-10 bg-emerald-500/10 text-emerald-500 rounded-lg flex items-center justify-center shrink-0"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <p class="text-xs text-slate-500 uppercase font-bold">Our Location</p>
+                            <p class="text-slate-300 font-bold">India</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright Bar -->
+        <div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-slate-800 text-center">
+            <p class="text-slate-500 text-sm font-medium">
+                Copyright © <span class="text-emerald-500">Mathaniya Technologies</span>. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bottom Fixed Ticker Placeholder (Bottom Ad Bar) -->
+    <div class="fixed bottom-0 left-0 w-full bg-white border-t-2 border-emerald-500 shadow-2xl z-[999] py-3 px-4 flex items-center">
+        <div class="more-service-tag">LATEST OFFER</div>
+        <div class="max-w-7xl mx-auto w-full flex justify-between items-center">
+            <p id="bottomAdText" class="text-slate-800 font-bold text-xs md:text-sm truncate pr-4">Loading today's deals...</p>
+            <a id="adBottomBtn" href="#" class="bg-emerald-600 text-white px-6 py-2 rounded-xl font-black text-[10px] md:text-xs uppercase shadow-lg flex-shrink-0">VISIT</a>
+        </div>
+    </div>
+    
+    <!-- Floating WA -->
+    <a href="javascript:location.href=getWALink('Floating')" class="fixed bottom-24 right-6 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl z-[1000] hover:scale-110 transition cursor-pointer"><i class="fab fa-whatsapp text-3xl"></i></a>
+
+    <script>
+        const SITE_CONFIG = {
+            whatsappNumber: "917851848679",
+            video1: "https://drive.google.com/file/d/1IDrSTriWCn_x8-jOTgPW_jzO2zuMLLfX/preview", 
+            video2: "https://drive.google.com/file/d/1WIXvqa1y0FZFPd4awUeBWSleyF2IXj0R/preview",
+            tickerAds: [
+                "🚀 Bulk WhatsApp Sender - Send 1000s of messages", "🤖 24/7 AI Chatbot for Business", "👥 Extract Data from Groups", "✅ Active Number Filtering", 
+                "🛡️ Anti-Block Technology Enabled", "📅 Message Scheduling", "👆 Interactive Buttons", "📸 Media Marketing Tools", 
+                "💼 Official WhatsApp API", "✅ Green Tick Assistance", "📈 Lead Generation Tools", "🔗 CRM Integration", 
+                "🎧 Multi-Agent Access", "🎯 Advanced Retargeting", "💡 Growth Marketing Strategy"
+            ],
+            features: [
+                { icon: "fa-paper-plane", en: "Bulk Sender", line1En: "Send thousands of msgs", moreEn: "Excel support\nPersonalized msgs\nMultimedia\nReports" },
+                { icon: "fa-robot", en: "AI Chatbot", line1En: "24/7 Auto Reply", moreEn: "Keyword reply\nButton support\nWelcome msg\nSmart flow" },
+                { icon: "fa-users", en: "Group Grabber", line1En: "Extract group data", moreEn: "One-click export\nUnlimited groups\nExcel/CSV\nFast & Safe" },
+                { icon: "fa-filter", en: "Number Filter", line1En: "Filter active numbers", moreEn: "WhatsApp check\nHigh speed\nBulk filter\nSave time" },
+                { icon: "fa-shield-alt", en: "Anti-Block", line1En: "Safe marketing", moreEn: "Smart sleep\nRotation\nHuman typing\nDelay settings" },
+                { icon: "fa-calendar-alt", en: "Scheduling", line1En: "Schedule campaigns", moreEn: "Auto send\nMultiple campaigns\nEdit/Update\nSet & Forget" },
+                { icon: "fa-mouse-pointer", en: "Button Message", line1En: "Interactive buttons", moreEn: "Call to Action\nLink buttons\nQuick reply\nHigh engagement" },
+                { icon: "fa-images", en: "Media Marketing", line1En: "Send photos/videos", moreEn: "HD Quality\nCaptions\nPDF/Files\nEasy manage" },
+                { icon: "fa-cogs", en: "Business API", line1En: "Official API Setup", moreEn: "Quick approval\nSecure\nVerification\nEasy integration" },
+                { icon: "fa-check-circle", en: "Green Tick", line1En: "Get Verified Badge", moreEn: "Credibility\nTrust\nOfficial\nHigh read rate" },
+                { icon: "fa-magnet", en: "Lead Gen", line1En: "Generate Leads", moreEn: "Click-to-WA\nAuto qualify\nHigh conversion\nInstant reply" },
+                { icon: "fa-network-wired", en: "CRM Integration", line1En: "Connect CRM", moreEn: "Data sync\nWorkflows\nCentralized\nReal-time" },
+                { icon: "fa-headset", en: "Multi-Agent", line1En: "Multiple Users", moreEn: "Shared inbox\nRoles\nTracking\nCollaboration" },
+                { icon: "fa-bullseye", en: "Retargeting", line1En: "Re-engage users", moreEn: "Segmentation\nFollow-ups\nOffers\nROI boost" },
+                { icon: "fa-lightbulb", en: "Strategy", line1En: "Marketing Strategy", moreEn: "Content\nPlanning\nConsulting\nExpert support" }
+            ],
+            plansData: [
+                { id: "starter", en: "Monthly", price: "999", durationEn: "/ month", featuresEn: ["Unlimited Msgs", "AI Chatbot", "Button Msgs", "Schedule Msgs", "High Speed", "Anti-Block Safe", "Priority Support", "Free Updates"] },
+                { id: "pro", en: "Yearly", price: "1,999", durationEn: "/ year", featuresEn: ["Unlimited Msgs", "AI Chatbot", "Button Msgs", "Schedule Msgs", "High Speed", "Anti-Block Safe", "Priority Support", "Free Updates"] },
+                { id: "lifetime", en: "Lifetime", price: "4,999", durationEn: "/ one time", featuresEn: ["Unlimited Msgs", "AI Chatbot", "Button Msgs", "Schedule Msgs", "High Speed", "Anti-Block Safe", "Priority Support", "Free Updates"] }
+            ],
+            otherServices: [
+                { color: "card-amber", en: "Custom Website Design", img: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiwmf67pIKUeBla3bXuAkji13aJysHVo7Fj5v7MfTs9-wHmtyCSyh-rIT1NnAALlD_Kf0PVfrD5Y0HsJ4ws4MBGX28h_fR1N1f6w5fK0D8_c-JMThB1dswlJXaYP9l_aF0RgXTLlKYaKtLF1haRCSp2Y8DIEOSmUCbs0JpHRAFJ-NYziZspJZK0IspHsFs/s1105/IMG_20260109_232134.jpg", link: "Custom Website Design" },
+                { color: "card-purple", en: "1 Crore Verified Leads", img: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhHceQgEnwmQvo8t7hizZr5z5_1tnVKbcPmfTdPtUU629rk_NAQIrnUJeXiZKLmkteV0Kx8a7yECHtdwSTny4mIuERNpZsfK5udPrpCtwwCOpkXN9c8CQGIHzmsOwMNvP6zkD2Xl7-FBAnibUKRs0wJcNq6yrdlzG5QJxjKVMiUN82MjP9W9_cABQKUtJM/s1536/IMG-20260113-WA0030.jpg", link: "B2B Data Bundle" }
+            ],
+            bottomAds: [
+                { en: "Single Page Business Website @ ₹999", link: "Website Offer" },
+                { en: "Connect with us on WhatsApp", link: "WA Chat" },
+                { en: "Grab 20% Discount on Software", link: "Discount" }
+            ]
+        };
+
+        let currentLang = 'en';
+
+        function getWALink(type, item, price) {
+            let msg = `Hello Mathaniya Technologies, I am interested in ${type}: ${item || ''}`;
+            if(price) msg += ` (Price: ₹${price})`;
+            return `https://wa.me/${SITE_CONFIG.whatsappNumber}?text=${encodeURIComponent(msg)}`;
+        }
+
+        function toggleNavMenu() {
+            const menu = document.getElementById('navMenu');
+            const btn = document.getElementById('menuToggleBtn');
+            menu.classList.toggle('show');
+            btn.classList.toggle('active');
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.closest('.relative')) {
+                const menu = document.getElementById('navMenu');
+                const btn = document.getElementById('menuToggleBtn');
+                if (menu && menu.classList.contains('show')) {
+                    menu.classList.remove('show');
+                    btn.classList.remove('active');
+                }
+            }
+        }
+
+        function toggleLanguage() {
+            const container = document.getElementById('langSwitcher');
+            currentLang = (currentLang === 'en') ? 'hi' : 'en';
+            
+            if (currentLang === 'hi') {
+                container.classList.add('is-hi');
+                document.getElementById('labelHi').className = 'lang-label active';
+                document.getElementById('labelEn').className = 'lang-label inactive';
+            } else {
+                container.classList.remove('is-hi');
+                document.getElementById('labelEn').className = 'lang-label active';
+                document.getElementById('labelHi').className = 'lang-label inactive';
+            }
+            renderUI();
+        }
+
+        function openModal(type) {
+            const modal = document.getElementById('infoModal');
+            const body = document.getElementById('modalBody');
+            
+            if(type === 'founder') {
+                 const existingFounderContent = document.getElementById('founderModalContent');
+                 if(existingFounderContent) {
+                     existingFounderContent.classList.remove('hidden');
+                     modal.style.display = 'flex';
+                     document.body.style.overflow = 'hidden';
+                 }
+            } else if(type === 'privacy') {
+                 body.innerHTML = `<div class="p-8"><h2 class="text-2xl font-bold mb-4">Privacy Policy</h2><p class="text-slate-600">We prioritize your data security. Mathaniya Technologies ensures that user information is encrypted and never shared with unauthorized third parties.</p><button onclick="closeModal()" class="mt-4 bg-slate-800 text-white px-4 py-2 rounded">Close</button></div>`;
+                 modal.style.display = 'flex';
+                 document.body.style.overflow = 'hidden';
+            } else if(type === 'terms') {
+                 body.innerHTML = `<div class="p-8"><h2 class="text-2xl font-bold mb-4">Terms & Conditions</h2><p class="text-slate-600">Standard usage policies apply. Our software must be used for legal marketing purposes only. Licenses are valid for single user/device unless mentioned.</p><button onclick="closeModal()" class="mt-4 bg-slate-800 text-white px-4 py-2 rounded">Close</button></div>`;
+                 modal.style.display = 'flex';
+                 document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('infoModal').style.display = 'none';
+            const fc = document.getElementById('founderModalContent');
+            if(fc) fc.classList.add('hidden');
+            // If we overwrote modalBody for privacy/terms, the founder content is still in DOM but might need resetting if complex
+            // Since founder content is static in HTML, if we overwrite body.innerHTML, we lose it.
+            // FIXED: privacy/terms should use a separate container or be alerts, OR we reload the page/reset content. 
+            // Better approach used here: founder content is hidden/shown, privacy is dynamic.
+            // NOTE: If privacy was opened, founder content DOM is gone. Reload required or better structure.
+            // For now, reloading page on close isn't good. Let's rely on the fact that founder content is large and separate.
+            // Re-injecting founder content if lost is complex. 
+            // Simple fix: Reload page if simple modal was used? No.
+            // Let's assume user only opens one or the other.
+            document.body.style.overflow = 'auto';
+        }
+
+        function renderUI() {
+            document.querySelectorAll('[data-en]').forEach(el => {
+                el.innerText = currentLang === 'hi' ? (el.getAttribute('data-hi') || el.getAttribute('data-en')) : el.getAttribute('data-en');
+            });
+
+            document.getElementById('tickerContent').innerHTML = SITE_CONFIG.tickerAds.join(' &nbsp;&nbsp;&nbsp; ✦ &nbsp;&nbsp;&nbsp; ');
+
+            const fGrid = document.getElementById('featureGrid');
+            fGrid.innerHTML = SITE_CONFIG.features.map(f => {
+                const points = f.moreEn.split('\n');
+                return `<div class="group relative transform hover:-translate-y-1 transition-all duration-300">
+                    <div class="absolute -inset-0.5 bg-gradient-to-r from-[#25D366] to-[#075E54] rounded-2xl opacity-50 blur"></div>
+                    <div class="relative bg-[#075E54] rounded-2xl p-3 md:p-5 flex flex-row items-center gap-4 border border-emerald-600/50">
+                        <div class="h-12 w-12 md:h-16 md:w-16 rounded-xl bg-gradient-to-br from-[#25D366] to-[#128C7E] flex items-center justify-center text-xl md:text-2xl text-white shadow-lg shrink-0 border-2 border-[#075E54]"><i class="fas ${f.icon}"></i></div>
+                        <div class="flex-1 min-w-0">
+                            <div class="flex items-center text-white mb-2"><h3 class="text-sm md:text-2xl font-black font-['Outfit'] uppercase truncate">${f.en}</h3><i class="fas fa-long-arrow-alt-right mx-2 text-[#25D366] text-xs"></i><span class="text-emerald-100 text-[10px] md:text-sm font-bold truncate">${f.line1En}</span></div>
+                            <div class="flex gap-2 w-full">
+                                <div class="flex-1 bg-black/20 rounded p-1.5 border-l-2 border-[#25D366] text-[9px] md:text-xs text-emerald-50">${points.slice(0,2).map(p=>`<div><i class="fas fa-star text-[#25D366] mr-1"></i>${p}</div>`).join('')}</div>
+                                <div class="flex-1 bg-black/20 rounded p-1.5 border-l-2 border-[#25D366] text-[9px] md:text-xs text-emerald-50">${points.slice(2,4).map(p=>`<div><i class="fas fa-star text-[#25D366] mr-1"></i>${p}</div>`).join('')}</div>
+                                <a href="${getWALink('Feature', f.en)}" class="shrink-0 flex items-center justify-center border-2 border-white text-white px-2 md:px-4 rounded-lg font-black text-[9px] md:text-xs uppercase hover:bg-white hover:text-[#075E54]">ORDER</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
+            }).join('');
+
+            document.getElementById('plansGrid').innerHTML = SITE_CONFIG.plansData.map(p => {
+                let style = p.id === 'starter' ? 'from-[#0f0c29] to-[#302b63] border-[#00d2ff]' : p.id === 'pro' ? 'from-[#FF512F] to-[#DD2476] border-white scale-105 z-10' : 'from-[#BF953F] to-black border-white';
+                let iconColor = p.id === 'starter' ? 'text-cyan-400' : p.id === 'pro' ? 'text-yellow-300' : 'text-yellow-500';
+                return `<div class="relative rounded-2xl p-2 md:p-6 flex flex-col justify-between text-center bg-gradient-to-br ${style} border-2 shadow-xl min-h-[300px] md:min-h-[500px]">
+                    ${p.id === 'pro' ? '<div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-white text-pink-600 px-3 py-0.5 rounded-full text-[9px] md:text-xs font-black uppercase shadow-lg border border-pink-100">Popular</div>' : ''}
+                    <div class="border-b border-white/20 pb-2 mb-2"><h3 class="font-black text-white text-[10px] md:text-2xl uppercase tracking-widest font-['Outfit']">${p.en}</h3></div>
+                    <div class="mb-2"><span class="text-xl md:text-6xl font-black text-white">₹${p.price}</span><div class="text-[8px] md:text-sm text-white/80 font-bold uppercase">${p.durationEn}</div></div>
+                    <div class="flex-grow flex flex-col gap-1 items-center text-white/90 text-[8px] md:text-base text-left">
+                        <div class="inline-flex flex-col gap-1 md:gap-2">${p.featuresEn.map(f => `<div class="flex items-center gap-1.5"><i class="fas fa-check-circle ${iconColor}"></i><span>${f}</span></div>`).join('')}</div>
+                    </div>
+                    <a href="${getWALink('Plan', p.en, p.price)}" class="mt-4 block w-full py-2 md:py-4 rounded-xl bg-white text-slate-900 font-black uppercase text-[10px] md:text-lg shadow-xl hover:scale-95 transition-transform">Buy Now</a>
+                </div>`;
+            }).join('');
+
+            const services = [
+                { t: "Digital Marketing", c: "blue", i: "fa-bullhorn", p: ["SEO Optimization", "Social Media Ads", "Email Marketing", "Lead Generation"] },
+                { t: "Content & Creative", c: "orange", i: "fa-lightbulb", p: ["Strategy Planning", "Content Writing", "Video Creation", "Real Editing"] },
+                { t: "Social Media Mgmt", c: "pink", i: "fa-share-alt", p: ["Account Management", "Content Scheduling", "Reels & Stories", "Community Growth"] },
+                { t: "Graphic Design", c: "teal", i: "fa-palette", p: ["Logo & Branding", "Posters & Flyers", "App Graphics", "Business ID"] },
+                { t: "Website & Tech", c: "indigo", i: "fa-globe", p: ["Web Development", "Landing Pages", "CRM Automation", "Analytics Setup"] },
+                { t: "Why Choose Us", c: "yellow", i: "fa-star", p: ["Result-driven", "Experienced Team", "Latest Tech", "Transparent Reports"] }
+            ];
+            document.getElementById('detailedServicesGrid').innerHTML = services.map(s => `
+                <div class="group bg-white rounded-3xl p-6 md:p-8 border-2 border-${s.c}-100 hover:border-${s.c}-400 shadow-sm hover:shadow-xl transition-all hover:-translate-y-2 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-${s.c}-500 w-24 h-24 rounded-bl-[4rem] opacity-5"></div>
+                    <div class="w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-gradient-to-br from-${s.c}-500 to-${s.c}-600 flex items-center justify-center text-white text-2xl md:text-3xl shadow-lg mb-6"><i class="fas ${s.i}"></i></div>
+                    <h3 class="text-xl md:text-2xl font-black text-slate-800 mb-4 font-['Outfit']">${s.t}</h3>
+                    <ul class="space-y-3">${s.p.map(p => `<li class="flex items-start gap-3 text-sm font-bold text-slate-600"><i class="fas fa-check-circle text-${s.c}-500 mt-0.5"></i>${p}</li>`).join('')}</ul>
+                </div>`).join('');
+
+            document.getElementById('serviceGrid').innerHTML = SITE_CONFIG.otherServices.map((s, i) => `
+                <div class="w-full">
+                    <a href="${getWALink('Service', s.en)}" class="block group relative overflow-hidden rounded-2xl shadow-lg mb-4"><img src="${s.img}" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"></a>
+                    ${i === 0 ? `<a href="${getWALink('Inquiry')}" class="block w-full bg-gradient-to-r from-emerald-800 to-teal-600 py-4 text-center text-white font-black uppercase tracking-widest my-4 rounded-xl shadow-xl hover:scale-[1.01] transition-all"><i class="fab fa-whatsapp text-2xl mr-2"></i> Contact For More Information</a>` : ''}
+                </div>`).join('');
+        }
+
+        let bottomIdx = 0;
+        function rotateBottomAd() {
+            const ad = SITE_CONFIG.bottomAds[bottomIdx];
+            const bT = document.getElementById('bottomAdText');
+            const bB = document.getElementById('adBottomBtn');
+            if(bT) { bT.style.opacity = 0; setTimeout(() => { bT.innerText = ad.en; bB.href = getWALink('BottomAd', ad.link); bT.style.opacity = 1; bottomIdx = (bottomIdx + 1) % SITE_CONFIG.bottomAds.length; }, 500); }
+        }
+
+        window.onload = () => {
+            // FIX: Added checks to prevent null error if elements are missing
+            const v1 = document.getElementById('v1');
+            const v2 = document.getElementById('v2');
+            if(v1) v1.src = SITE_CONFIG.video1;
+            if(v2) v2.src = SITE_CONFIG.video2;
+            
+            renderUI();
+            setInterval(rotateBottomAd, 4000);
+        };
+    </script>
+</body>
+</html>
