@@ -263,7 +263,7 @@
 
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 pb-20 md:pb-0">
+<body class="bg-slate-50 text-slate-900 md:pb-0">
 
     <!-- Section 1: Navigation -->
     <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md h-[65px] md:h-[90px] flex items-center px-3 md:px-8 shadow-lg border-b border-slate-100 transition-all">
@@ -456,10 +456,45 @@
         <div class="max-w-6xl mx-auto"><div id="featureGrid" class="flex flex-col gap-3 md:gap-6 mt-6"></div></div>
     </section>
 
+    <!-- NEW: MAST SHANDAR CTA PATTI (Between Features & Video) - UPDATED TO GREEN THEME -->
+    <section class="relative w-full overflow-hidden bg-gradient-to-r from-emerald-700 via-teal-600 to-emerald-500 py-10 md:py-14 shadow-2xl z-20 border-y-4 border-emerald-300">
+        <!-- Animated Background Effect -->
+        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent animate-pulse"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6 relative z-10">
+            <!-- Text Content -->
+            <div class="text-center md:text-left flex-1">
+                <h3 class="text-2xl md:text-5xl font-black uppercase font-['Outfit'] tracking-wide leading-tight text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.3)]">
+                    🚀 Want to <span class="text-yellow-300 underline decoration-wavy decoration-2 underline-offset-4">Automate</span> Your Business?
+                </h3>
+                <p class="text-sm md:text-xl font-bold text-white/95 mt-2 bg-emerald-900/30 inline-block px-4 py-1 rounded-full border border-emerald-400/30">Don't waste time manually! Get the Power of AI Tools Today.</p>
+            </div>
+            
+            <!-- Button - Adjusted colors to match Green theme -->
+            <a href="javascript:location.href=getWALink('Mid Page Big CTA')" class="group relative bg-white text-emerald-800 border-4 border-emerald-200 px-8 md:px-12 py-3 md:py-5 rounded-full font-black text-lg md:text-2xl shadow-[0_0_20px_rgba(16,185,129,0.4)] hover:scale-105 hover:shadow-[0_0_40px_rgba(52,211,153,0.6)] hover:-translate-y-1 transition-all duration-300 flex items-center gap-3 shrink-0">
+                <i class="fab fa-whatsapp text-3xl md:text-4xl text-[#25D366]"></i> 
+                <span>GET ACCESS NOW</span>
+                <i class="fas fa-arrow-right group-hover:translate-x-2 transition-transform text-emerald-600"></i>
+            </a>
+        </div>
+    </section>
+
     <!-- Section: Live Video Demos (First Video Full Width on Mobile) -->
     <section id="demos" class="py-12 px-4 bg-white border-t border-slate-100">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-2xl md:text-4xl font-black text-center text-slate-800 mb-8 font-['Outfit']">About Software</h2>
+            
+            <!-- UPDATED HEADING 1: Stylish Strip + Handwriting Font -->
+            <div class="text-center mb-8">
+                <div class="inline-block relative group cursor-default">
+                    <!-- The Background Strip (Patti) -->
+                    <div class="absolute inset-0 bg-gradient-to-r from-emerald-600 to-teal-500 transform -skew-x-12 rounded shadow-lg group-hover:scale-105 transition-transform duration-300"></div>
+                    <!-- The Text -->
+                    <h2 class="relative z-10 text-2xl md:text-4xl text-white px-8 py-1" style="font-family: 'Kaushan Script', cursive; text-shadow: 2px 2px 0px rgba(0,0,0,0.1);">
+                        About Software
+                    </h2>
+                </div>
+            </div>
+
             <!-- Layout: Up/Down arrangement -->
             <div class="flex flex-col gap-8 md:gap-12 items-center">
                 
@@ -469,8 +504,19 @@
                     <iframe id="v1" class="w-full h-full" allow="autoplay" loading="lazy"></iframe>
                 </div>
 
+                <!-- UPDATED HEADING 2: Stylish Strip + Handwriting Font -->
+                <div class="text-center mt-4">
+                    <div class="inline-block relative group cursor-default">
+                        <!-- The Background Strip (Patti) -->
+                        <div class="absolute inset-0 bg-gradient-to-r from-emerald-600 to-teal-500 transform -skew-x-12 rounded shadow-lg group-hover:scale-105 transition-transform duration-300"></div>
+                        <!-- The Text -->
+                        <h2 class="relative z-10 text-2xl md:text-4xl text-white px-8 py-1" style="font-family: 'Kaushan Script', cursive; text-shadow: 2px 2px 0px rgba(0,0,0,0.1);">
+                            Software Live Demo
+                        </h2>
+                    </div>
+                </div>
+
                 <!-- Video 2: 4:3 Aspect Ratio (No Change) -->
-                 <h2 class="text-2xl md:text-4xl font-black text-center text-slate-800 mb-8 font-['Outfit']">Software Live Demo</h2>
                 <div class="w-full rounded-2xl overflow-hidden shadow-2xl border-4 border-slate-200 relative bg-black group" style="aspect-ratio: 4/3;">
                     <iframe id="v2" class="w-full h-full" allow="autoplay" loading="lazy"></iframe>
                 </div>
@@ -504,7 +550,8 @@
         <div class="max-w-7xl mx-auto relative z-10">
             <div class="text-center mb-16">
                 <span class="bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-bold tracking-wider uppercase text-[10px] md:text-xs px-4 py-1.5 rounded-full shadow-lg">Our Expertise</span>
-                <h2 class="text-3xl md:text-5xl font-black text-slate-800 mt-6 font-['Outfit']" data-hi="हमारी अन्य सेवाएँ" data-en="Our Other Services">Our Other Services</h2>
+                <!-- UPDATED: "Our Other Services" in Handwriting Style -->
+                <h2 class="text-3xl md:text-5xl font-black text-slate-800 mt-6" style="font-family: 'Kaushan Script', cursive;" data-hi="हमारी अन्य सेवाएँ" data-en="Our Other Services">Our Other Services</h2>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="detailedServicesGrid">
                 <!-- Data populated via script below -->
@@ -529,7 +576,7 @@
     </section>
 
     <!-- UPDATED: Professional Footer Section -->
-    <footer id="contact" class="bg-slate-900 text-white pt-16 pb-28 md:pb-12 px-4 relative overflow-hidden border-t-4 border-emerald-500">
+    <footer id="contact" class="bg-slate-900 text-white pt-16 pb-14 md:pb-12 px-4 relative overflow-hidden border-t-4 border-emerald-500">
         <!-- Decoration Background -->
         <div class="absolute top-0 right-0 w-64 h-64 bg-emerald-900/20 rounded-full blur-3xl"></div>
         
@@ -638,54 +685,54 @@
             whatsappNumber: "917851848679",
             video1: "https://drive.google.com/file/d/1IDrSTriWCn_x8-jOTgPW_jzO2zuMLLfX/preview", 
             video2: "https://drive.google.com/file/d/1WIXvqa1y0FZFPd4awUeBWSleyF2IXj0R/preview",
-            // UPDATED: Professional Icons and Clean Text for Ticker
+            // UPDATED: Added Hindi Translations
             tickerAds: [
-                { icon: "fa-paper-plane", text: "Bulk WhatsApp Sender" },
-                { icon: "fa-robot", text: "24/7 AI Chatbot Automation" },
-                { icon: "fa-database", text: "Group Data Extractor" },
-                { icon: "fa-filter", text: "Active Number Filter" },
-                { icon: "fa-shield-halved", text: "Anti-Block Technology" },
-                { icon: "fa-calendar-check", text: "Smart Campaign Scheduling" },
-                { icon: "fa-hand-pointer", text: "Interactive Button Messages" },
-                { icon: "fa-photo-video", text: "Multimedia Marketing Tools" },
-                { icon: "fa-code-branch", text: "Official WhatsApp API" },
-                { icon: "fa-check-circle", text: "Green Tick Verification Support" },
-                { icon: "fa-bullseye", text: "Targeted Lead Generation" },
-                { icon: "fa-users-cog", text: "CRM Integration Ready" },
-                { icon: "fa-headset", text: "Multi-Agent Support System" },
-                { icon: "fa-sync-alt", text: "Advanced Retargeting" },
-                { icon: "fa-chess-knight", text: "Strategic Growth Marketing" }
+                { icon: "fa-paper-plane", en: "Bulk WhatsApp Sender", hi: "बल्क व्हाट्सएप सेंडर" },
+                { icon: "fa-robot", en: "24/7 AI Chatbot Automation", hi: "24/7 AI चैटबॉट ऑटोमेशन" },
+                { icon: "fa-database", en: "Group Data Extractor", hi: "ग्रुप डेटा एक्सट्रैक्टर" },
+                { icon: "fa-filter", en: "Active Number Filter", hi: "सक्रिय नंबर फ़िल्टर" },
+                { icon: "fa-shield-halved", en: "Anti-Block Technology", hi: "एंटी-ब्लॉक तकनीक" },
+                { icon: "fa-calendar-check", en: "Smart Campaign Scheduling", hi: "स्मार्ट कैंपेन शेड्यूलिंग" },
+                { icon: "fa-hand-pointer", en: "Interactive Button Messages", hi: "इंटरैक्टिव बटन मैसेज" },
+                { icon: "fa-photo-video", en: "Multimedia Marketing Tools", hi: "मल्टीमीडिया मार्केटिंग टूल्स" },
+                { icon: "fa-code-branch", en: "Official WhatsApp API", hi: "आधिकारिक व्हाट्सएप एपीआई" },
+                { icon: "fa-check-circle", en: "Green Tick Verification Support", hi: "ग्रीन टिक वेरिफिकेशन सपोर्ट" },
+                { icon: "fa-bullseye", en: "Targeted Lead Generation", hi: "लक्षित लीड जनरेशन" },
+                { icon: "fa-users-cog", en: "CRM Integration Ready", hi: "CRM इंटीग्रेशन तैयार" },
+                { icon: "fa-headset", en: "Multi-Agent Support System", hi: "मल्टी-एजेंट सपोर्ट सिस्टम" },
+                { icon: "fa-sync-alt", en: "Advanced Retargeting", hi: "उन्नत रीटारगेटिंग" },
+                { icon: "fa-chess-knight", en: "Strategic Growth Marketing", hi: "रणनीतिक विकास मार्केटिंग" }
             ],
             features: [
-                { icon: "fa-paper-plane", en: "Bulk Sender", line1En: "Send thousands of msgs", moreEn: "Excel support\nPersonalized msgs\nMultimedia\nReports" },
-                { icon: "fa-robot", en: "AI Chatbot", line1En: "24/7 Auto Reply", moreEn: "Keyword reply\nButton support\nWelcome msg\nSmart flow" },
-                { icon: "fa-users", en: "Group Grabber", line1En: "Extract group data", moreEn: "One-click export\nUnlimited groups\nExcel/CSV\nFast & Safe" },
-                { icon: "fa-filter", en: "Number Filter", line1En: "Filter active numbers", moreEn: "WhatsApp check\nHigh speed\nBulk filter\nSave time" },
-                { icon: "fa-shield-alt", en: "Anti-Block", line1En: "Safe marketing", moreEn: "Smart sleep\nRotation\nHuman typing\nDelay settings" },
-                { icon: "fa-calendar-alt", en: "Scheduling", line1En: "Schedule campaigns", moreEn: "Auto send\nMultiple campaigns\nEdit/Update\nSet & Forget" },
-                { icon: "fa-mouse-pointer", en: "Button Message", line1En: "Interactive buttons", moreEn: "Call to Action\nLink buttons\nQuick reply\nHigh engagement" },
-                { icon: "fa-images", en: "Media Marketing", line1En: "Send photos/videos", moreEn: "HD Quality\nCaptions\nPDF/Files\nEasy manage" },
-                { icon: "fa-cogs", en: "Business API", line1En: "Official API Setup", moreEn: "Quick approval\nSecure\nVerification\nEasy integration" },
-                { icon: "fa-check-circle", en: "Green Tick", line1En: "Get Verified Badge", moreEn: "Credibility\nTrust\nOfficial\nHigh read rate" },
-                { icon: "fa-magnet", en: "Lead Gen", line1En: "Generate Leads", moreEn: "Click-to-WA\nAuto qualify\nHigh conversion\nInstant reply" },
-                { icon: "fa-network-wired", en: "CRM Integration", line1En: "Connect CRM", moreEn: "Data sync\nWorkflows\nCentralized\nReal-time" },
-                { icon: "fa-headset", en: "Multi-Agent", line1En: "Multiple Users", moreEn: "Shared inbox\nRoles\nTracking\nCollaboration" },
-                { icon: "fa-bullseye", en: "Retargeting", line1En: "Re-engage users", moreEn: "Segmentation\nFollow-ups\nOffers\nROI boost" },
-                { icon: "fa-lightbulb", en: "Strategy", line1En: "Marketing Strategy", moreEn: "Content\nPlanning\nConsulting\nExpert support" }
+                { icon: "fa-paper-plane", en: "Bulk Sender", hi: "बल्क सेंडर", line1En: "Send thousands of msgs", line1Hi: "हजारों संदेश भेजें", moreEn: "Excel support\nPersonalized msgs\nMultimedia\nReports", moreHi: "एक्सेल सपोर्ट\nनिजीकृत संदेश\nमल्टीमीडिया\nरिपोर्ट्स" },
+                { icon: "fa-robot", en: "AI Chatbot", hi: "AI चैटबॉट", line1En: "24/7 Auto Reply", line1Hi: "24/7 ऑटो रिप्लाई", moreEn: "Keyword reply\nButton support\nWelcome msg\nSmart flow", moreHi: "कीवर्ड रिप्लाई\nबटन सपोर्ट\nवेलकम मैसेज\nस्मार्ट फ्लो" },
+                { icon: "fa-users", en: "Group Grabber", hi: "ग्रुप ग्रैबर", line1En: "Extract group data", line1Hi: "ग्रुप डेटा निकालें", moreEn: "One-click export\nUnlimited groups\nExcel/CSV\nFast & Safe", moreHi: "एक-क्लिक निर्यात\nअसीमित समूह\nएक्सेल/CSV\nतेज़ और सुरक्षित" },
+                { icon: "fa-filter", en: "Number Filter", hi: "नंबर फ़िल्टर", line1En: "Filter active numbers", line1Hi: "सक्रिय नंबर फ़िल्टर करें", moreEn: "WhatsApp check\nHigh speed\nBulk filter\nSave time", moreHi: "व्हाट्सएप चेक\nतेज़ गति\nबल्क फ़िल्टर\nसमय बचाएं" },
+                { icon: "fa-shield-alt", en: "Anti-Block", hi: "एंटी-ब्लॉक", line1En: "Safe marketing", line1Hi: "सुरक्षित मार्केटिंग", moreEn: "Smart sleep\nRotation\nHuman typing\nDelay settings", moreHi: "स्मार्ट स्लीप\nरोटेशन\nह्यूमन टाइपिंग\nदेरी सेटिंग्स" },
+                { icon: "fa-calendar-alt", en: "Scheduling", hi: "शेड्यूलिंग", line1En: "Schedule campaigns", line1Hi: "कैंपेन शेड्यूल करें", moreEn: "Auto send\nMultiple campaigns\nEdit/Update\nSet & Forget", moreHi: "ऑटो सेंड\nमल्टीपल कैंपेन\nएडिट/अपडेट\nसेट और भूल जाओ" },
+                { icon: "fa-mouse-pointer", en: "Button Message", hi: "बटन मैसेज", line1En: "Interactive buttons", line1Hi: "इंटरैक्टिव बटन", moreEn: "Call to Action\nLink buttons\nQuick reply\nHigh engagement", moreHi: "कॉल टू एक्शन\nलिंक बटन\nक्विक रिप्लाई\nउच्च जुड़ाव" },
+                { icon: "fa-images", en: "Media Marketing", hi: "मीडिया मार्केटिंग", line1En: "Send photos/videos", line1Hi: "फ़ोटो/वीडियो भेजें", moreEn: "HD Quality\nCaptions\nPDF/Files\nEasy manage", moreHi: "HD क्वालिटी\nकैप्शन\nPDF/फाइलें\nआसान प्रबंधन" },
+                { icon: "fa-cogs", en: "Business API", hi: "बिज़नेस API", line1En: "Official API Setup", line1Hi: "ऑफिशियल API सेटअप", moreEn: "Quick approval\nSecure\nVerification\nEasy integration", moreHi: "त्वरित अनुमोदन\nसुरक्षित\nवेरिफिकेशन\nआसान एकीकरण" },
+                { icon: "fa-check-circle", en: "Green Tick", hi: "ग्रीन टिक", line1En: "Get Verified Badge", line1Hi: "वेरिफाइड बैज प्राप्त करें", moreEn: "Credibility\nTrust\nOfficial\nHigh read rate", moreHi: "विश्वसनीयता\nभरोसा\nआधिकारिक\nउच्च रीड रेट" },
+                { icon: "fa-magnet", en: "Lead Gen", hi: "लीड जनरेशन", line1En: "Generate Leads", line1Hi: "लीड्स जेनरेट करें", moreEn: "Click-to-WA\nAuto qualify\nHigh conversion\nInstant reply", moreHi: "क्लिक-टू-WA\nऑटो क्वालिफाई\nउच्च रूपांतरण\nत्वरित उत्तर" },
+                { icon: "fa-network-wired", en: "CRM Integration", hi: "CRM इंटीग्रेशन", line1En: "Connect CRM", line1Hi: "CRM कनेक्ट करें", moreEn: "Data sync\nWorkflows\nCentralized\nReal-time", moreHi: "डेटा सिंक\nवर्कफ़्लो\nकेंद्रीकृत\nरियल-टाइम" },
+                { icon: "fa-headset", en: "Multi-Agent", hi: "मल्टी-एजेंट", line1En: "Multiple Users", line1Hi: "मल्टीपल यूजर्स", moreEn: "Shared inbox\nRoles\nTracking\nCollaboration", moreHi: "शेयर्ड इनबॉक्स\nरोल्स\nट्रैकिंग\nसहयोग" },
+                { icon: "fa-bullseye", en: "Retargeting", hi: "रीटारगेटिंग", line1En: "Re-engage users", line1Hi: "यूजर्स को फिर से जोड़ें", moreEn: "Segmentation\nFollow-ups\nOffers\nROI boost", moreHi: "सेगमेंटेशन\nफॉलो-अप\nऑफ़र\nROI बूस्ट" },
+                { icon: "fa-lightbulb", en: "Strategy", hi: "रणनीति", line1En: "Marketing Strategy", line1Hi: "मार्केटिंग रणनीति", moreEn: "Content\nPlanning\nConsulting\nExpert support", moreHi: "कंटेंट\nप्लानिंग\nकंसल्टिंग\nएक्सपर्ट सपोर्ट" }
             ],
             plansData: [
-                { id: "starter", en: "Monthly", price: "999", durationEn: "/ month", featuresEn: ["Unlimited Msgs", "AI Chatbot", "Button Msgs", "Schedule Msgs", "High Speed", "Anti-Block Safe", "Priority Support", "Free Updates"] },
-                { id: "pro", en: "Yearly", price: "1,999", durationEn: "/ year", featuresEn: ["Unlimited Msgs", "AI Chatbot", "Button Msgs", "Schedule Msgs", "High Speed", "Anti-Block Safe", "Priority Support", "Free Updates"] },
-                { id: "lifetime", en: "Lifetime", price: "4,999", durationEn: "/ one time", featuresEn: ["Unlimited Msgs", "AI Chatbot", "Button Msgs", "Schedule Msgs", "High Speed", "Anti-Block Safe", "Priority Support", "Free Updates"] }
+                { id: "starter", en: "Monthly", hi: "मासिक", price: "999", durationEn: "/ month", durationHi: "/ महीना", featuresEn: ["Unlimited Msgs", "AI Chatbot", "Button Msgs", "Schedule Msgs", "High Speed", "Anti-Block Safe", "Priority Support", "Free Updates"], featuresHi: ["अनलिमिटेड मैसेज", "AI चैटबॉट", "बटन मैसेज", "शेड्यूल मैसेज", "तेज़ गति", "एंटी-ब्लॉक सेफ", "प्रायोरिटी सपोर्ट", "फ्री अपडेट्स"] },
+                { id: "pro", en: "Yearly", hi: "वार्षिक", price: "1,999", durationEn: "/ year", durationHi: "/ साल", featuresEn: ["Unlimited Msgs", "AI Chatbot", "Button Msgs", "Schedule Msgs", "High Speed", "Anti-Block Safe", "Priority Support", "Free Updates"], featuresHi: ["अनलिमिटेड मैसेज", "AI चैटबॉट", "बटन मैसेज", "शेड्यूल मैसेज", "तेज़ गति", "एंटी-ब्लॉक सेफ", "प्रायोरिटी सपोर्ट", "फ्री अपडेट्स"] },
+                { id: "lifetime", en: "Lifetime", hi: "लाइफटाइम", price: "4,999", durationEn: "/ one time", durationHi: "/ एक बार", featuresEn: ["Unlimited Msgs", "AI Chatbot", "Button Msgs", "Schedule Msgs", "High Speed", "Anti-Block Safe", "Priority Support", "Free Updates"], featuresHi: ["अनलिमिटेड मैसेज", "AI चैटबॉट", "बटन मैसेज", "शेड्यूल मैसेज", "तेज़ गति", "एंटी-ब्लॉक सेफ", "प्रायोरिटी सपोर्ट", "फ्री अपडेट्स"] }
             ],
             otherServices: [
-                { color: "card-amber", en: "Custom Website Design", img: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiwmf67pIKUeBla3bXuAkji13aJysHVo7Fj5v7MfTs9-wHmtyCSyh-rIT1NnAALlD_Kf0PVfrD5Y0HsJ4ws4MBGX28h_fR1N1f6w5fK0D8_c-JMThB1dswlJXaYP9l_aF0RgXTLlKYaKtLF1haRCSp2Y8DIEOSmUCbs0JpHRAFJ-NYziZspJZK0IspHsFs/s1105/IMG_20260109_232134.jpg", link: "Custom Website Design" },
-                { color: "card-purple", en: "1 Crore Verified Leads", img: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhHceQgEnwmQvo8t7hizZr5z5_1tnVKbcPmfTdPtUU629rk_NAQIrnUJeXiZKLmkteV0Kx8a7yECHtdwSTny4mIuERNpZsfK5udPrpCtwwCOpkXN9c8CQGIHzmsOwMNvP6zkD2Xl7-FBAnibUKRs0wJcNq6yrdlzG5QJxjKVMiUN82MjP9W9_cABQKUtJM/s1536/IMG-20260113-WA0030.jpg", link: "B2B Data Bundle" }
+                { color: "card-amber", en: "Custom Website Design", hi: "कस्टम वेबसाइट डिज़ाइन", img: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiwmf67pIKUeBla3bXuAkji13aJysHVo7Fj5v7MfTs9-wHmtyCSyh-rIT1NnAALlD_Kf0PVfrD5Y0HsJ4ws4MBGX28h_fR1N1f6w5fK0D8_c-JMThB1dswlJXaYP9l_aF0RgXTLlKYaKtLF1haRCSp2Y8DIEOSmUCbs0JpHRAFJ-NYziZspJZK0IspHsFs/s1105/IMG_20260109_232134.jpg", link: "Custom Website Design" },
+                { color: "card-purple", en: "1 Crore Verified Leads", hi: "1 करोड़ वेरिफाइड लीड्स", img: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhHceQgEnwmQvo8t7hizZr5z5_1tnVKbcPmfTdPtUU629rk_NAQIrnUJeXiZKLmkteV0Kx8a7yECHtdwSTny4mIuERNpZsfK5udPrpCtwwCOpkXN9c8CQGIHzmsOwMNvP6zkD2Xl7-FBAnibUKRs0wJcNq6yrdlzG5QJxjKVMiUN82MjP9W9_cABQKUtJM/s1536/IMG-20260113-WA0030.jpg", link: "B2B Data Bundle" }
             ],
             bottomAds: [
-                { en: "Single Page Business Website @ ₹999", link: "Website Offer" },
-                { en: "Connect with us on WhatsApp", link: "WA Chat" },
-                { en: "Grab 20% Discount on Software", link: "Discount" }
+                { en: "Single Page Business Website @ ₹999", hi: "सिंगल पेज बिज़नेस वेबसाइट @ ₹999", link: "Website Offer" },
+                { en: "Connect with us on WhatsApp", hi: "हमसे व्हाट्सएप पर जुड़ें", link: "WA Chat" },
+                { en: "Grab 20% Discount on Software", hi: "सॉफ्टवेयर पर 20% छूट प्राप्त करें", link: "Discount" }
             ]
         };
 
@@ -757,40 +804,33 @@
             document.getElementById('infoModal').style.display = 'none';
             const fc = document.getElementById('founderModalContent');
             if(fc) fc.classList.add('hidden');
-            // If we overwrote modalBody for privacy/terms, the founder content is still in DOM but might need resetting if complex
-            // Since founder content is static in HTML, if we overwrite body.innerHTML, we lose it.
-            // FIXED: privacy/terms should use a separate container or be alerts, OR we reload the page/reset content. 
-            // Better approach used here: founder content is hidden/shown, privacy is dynamic.
-            // NOTE: If privacy was opened, founder content DOM is gone. Reload required or better structure.
-            // For now, reloading page on close isn't good. Let's rely on the fact that founder content is large and separate.
-            // Re-injecting founder content if lost is complex. 
-            // Simple fix: Reload page if simple modal was used? No.
-            // Let's assume user only opens one or the other.
             document.body.style.overflow = 'auto';
         }
 
         function renderUI() {
+            // Update static elements with data attributes
             document.querySelectorAll('[data-en]').forEach(el => {
                 el.innerText = currentLang === 'hi' ? (el.getAttribute('data-hi') || el.getAttribute('data-en')) : el.getAttribute('data-en');
             });
 
-            // UPDATED: Ticker Rendering with Professional Icons & Font
+            // UPDATED: Ticker Rendering with Dynamic Language Support
             const tickerHtml = SITE_CONFIG.tickerAds.map(item => `
                 <span class="inline-flex items-center mx-6 text-sm md:text-lg font-black font-['Outfit'] tracking-wider text-slate-800 uppercase hover:text-emerald-600 transition-colors cursor-default" style="text-shadow: 1px 1px 0px rgba(0,0,0,0.05);">
-                    <i class="fas ${item.icon} text-emerald-500 mr-2 text-xl drop-shadow-sm"></i> ${item.text}
+                    <i class="fas ${item.icon} text-emerald-500 mr-2 text-xl drop-shadow-sm"></i> ${currentLang === 'hi' ? item.hi : item.en}
                 </span>`
             ).join('');
             document.getElementById('tickerContent').innerHTML = tickerHtml + tickerHtml;
 
+            // UPDATED: Feature Grid with Dynamic Language Support
             const fGrid = document.getElementById('featureGrid');
             fGrid.innerHTML = SITE_CONFIG.features.map(f => {
-                const points = f.moreEn.split('\n');
+                const points = (currentLang === 'hi' ? f.moreHi : f.moreEn).split('\n');
                 return `<div class="group relative transform hover:-translate-y-1 transition-all duration-300">
                     <div class="absolute -inset-0.5 bg-gradient-to-r from-[#25D366] to-[#075E54] rounded-2xl opacity-50 blur"></div>
                     <div class="relative bg-[#075E54] rounded-2xl p-3 md:p-5 flex flex-row items-center gap-4 border border-emerald-600/50">
                         <div class="h-12 w-12 md:h-16 md:w-16 rounded-xl bg-gradient-to-br from-[#25D366] to-[#128C7E] flex items-center justify-center text-xl md:text-2xl text-white shadow-lg shrink-0 border-2 border-[#075E54]"><i class="fas ${f.icon}"></i></div>
                         <div class="flex-1 min-w-0">
-                            <div class="flex items-center text-white mb-2"><h3 class="text-sm md:text-2xl font-black font-['Outfit'] uppercase truncate">${f.en}</h3><i class="fas fa-long-arrow-alt-right mx-2 text-[#25D366] text-xs"></i><span class="text-emerald-100 text-[10px] md:text-sm font-bold truncate">${f.line1En}</span></div>
+                            <div class="flex items-center text-white mb-2"><h3 class="text-sm md:text-2xl font-black font-['Outfit'] uppercase truncate">${currentLang === 'hi' ? f.hi : f.en}</h3><i class="fas fa-long-arrow-alt-right mx-2 text-[#25D366] text-xs"></i><span class="text-emerald-100 text-[10px] md:text-sm font-bold truncate">${currentLang === 'hi' ? f.line1Hi : f.line1En}</span></div>
                             <div class="flex gap-2 w-full">
                                 <div class="flex-1 bg-black/20 rounded p-1.5 border-l-2 border-[#25D366] text-[9px] md:text-xs text-emerald-50">${points.slice(0,2).map(p=>`<div><i class="fas fa-star text-[#25D366] mr-1"></i>${p}</div>`).join('')}</div>
                                 <div class="flex-1 bg-black/20 rounded p-1.5 border-l-2 border-[#25D366] text-[9px] md:text-xs text-emerald-50">${points.slice(2,4).map(p=>`<div><i class="fas fa-star text-[#25D366] mr-1"></i>${p}</div>`).join('')}</div>
@@ -801,40 +841,52 @@
                 </div>`;
             }).join('');
 
+            // UPDATED: Pricing Grid with Dynamic Language Support
             document.getElementById('plansGrid').innerHTML = SITE_CONFIG.plansData.map(p => {
                 let style = p.id === 'starter' ? 'from-[#0f0c29] to-[#302b63] border-[#00d2ff]' : p.id === 'pro' ? 'from-[#FF512F] to-[#DD2476] border-white scale-105 z-10' : 'from-[#BF953F] to-black border-white';
                 let iconColor = p.id === 'starter' ? 'text-cyan-400' : p.id === 'pro' ? 'text-yellow-300' : 'text-yellow-500';
+                const featuresList = currentLang === 'hi' ? p.featuresHi : p.featuresEn;
+                const duration = currentLang === 'hi' ? p.durationHi : p.durationEn;
+                const title = currentLang === 'hi' ? p.hi : p.en;
+                
                 return `<div class="relative rounded-2xl p-2 md:p-6 flex flex-col justify-between text-center bg-gradient-to-br ${style} border-2 shadow-xl min-h-[300px] md:min-h-[500px]">
                     ${p.id === 'pro' ? '<div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-white text-pink-600 px-3 py-0.5 rounded-full text-[9px] md:text-xs font-black uppercase shadow-lg border border-pink-100">Popular</div>' : ''}
-                    <div class="border-b border-white/20 pb-2 mb-2"><h3 class="font-black text-white text-[10px] md:text-2xl uppercase tracking-widest font-['Outfit']">${p.en}</h3></div>
-                    <div class="mb-2"><span class="text-xl md:text-6xl font-black text-white">₹${p.price}</span><div class="text-[8px] md:text-sm text-white/80 font-bold uppercase">${p.durationEn}</div></div>
+                    <div class="border-b border-white/20 pb-2 mb-2"><h3 class="font-black text-white text-[10px] md:text-2xl uppercase tracking-widest font-['Outfit']">${title}</h3></div>
+                    <div class="mb-2"><span class="text-xl md:text-6xl font-black text-white">₹${p.price}</span><div class="text-[8px] md:text-sm text-white/80 font-bold uppercase">${duration}</div></div>
                     <div class="flex-grow flex flex-col gap-1 items-center text-white/90 text-[8px] md:text-base text-left">
-                        <div class="inline-flex flex-col gap-1 md:gap-2">${p.featuresEn.map(f => `<div class="flex items-center gap-1.5"><i class="fas fa-check-circle ${iconColor}"></i><span>${f}</span></div>`).join('')}</div>
+                        <div class="inline-flex flex-col gap-1 md:gap-2">${featuresList.map(f => `<div class="flex items-center gap-1.5"><i class="fas fa-check-circle ${iconColor}"></i><span>${f}</span></div>`).join('')}</div>
                     </div>
                     <a href="${getWALink('Plan', p.en, p.price)}" class="mt-4 block w-full py-2 md:py-4 rounded-xl bg-white text-slate-900 font-black uppercase text-[10px] md:text-lg shadow-xl hover:scale-95 transition-transform">Buy Now</a>
                 </div>`;
             }).join('');
 
+            // UPDATED: Detailed Services with Dynamic Language Support
             const services = [
-                { t: "Digital Marketing", c: "blue", i: "fa-bullhorn", p: ["SEO Optimization", "Social Media Ads", "Email Marketing", "Lead Generation"] },
-                { t: "Content & Creative", c: "orange", i: "fa-lightbulb", p: ["Strategy Planning", "Content Writing", "Video Creation", "Reel Editing"] },
-                { t: "Social Media Mgmt", c: "pink", i: "fa-share-alt", p: ["Account Management", "Content Scheduling", "Reels & Stories", "Community Growth"] },
-                { t: "Graphic Design", c: "teal", i: "fa-palette", p: ["Logo & Branding", "Posters & Flyers", "App Graphics", "Business ID"] },
-                { t: "Website & Tech", c: "indigo", i: "fa-globe", p: ["Web Development", "Landing Pages", "CRM Automation", "Analytics Setup"] },
-                { t: "Why Choose Us", c: "yellow", i: "fa-star", p: ["Result-driven", "Experienced Team", "Latest Tech", "Transparent Reports"] }
+                { tEn: "Digital Marketing", tHi: "डिजिटल मार्केटिंग", c: "blue", i: "fa-bullhorn", pEn: ["SEO Optimization", "Social Media Ads", "Email Marketing", "Lead Generation"], pHi: ["SEO ऑप्टिमाइजेशन", "सोशल मीडिया विज्ञापन", "ईमेल मार्केटिंग", "लीड जनरेशन"] },
+                { tEn: "Content & Creative", tHi: "कंटेंट और क्रिएटिव", c: "orange", i: "fa-lightbulb", pEn: ["Strategy Planning", "Content Writing", "Video Creation", "Real Editing"], pHi: ["रणनीति योजना", "कंटेंट लेखन", "वीडियो निर्माण", "रियल एडिटिंग"] },
+                { tEn: "Social Media Mgmt", tHi: "सोशल मीडिया प्रबंधन", c: "pink", i: "fa-share-alt", pEn: ["Account Management", "Content Scheduling", "Reels & Stories", "Community Growth"], pHi: ["अकाउंट प्रबंधन", "कंटेंट शेड्यूलिंग", "रील्स और स्टोरीज", "कम्युनिटी ग्रोथ"] },
+                { tEn: "Graphic Design", tHi: "ग्राफिक डिजाइन", c: "teal", i: "fa-palette", pEn: ["Logo & Branding", "Posters & Flyers", "App Graphics", "Business ID"], pHi: ["लोगो और ब्रांडिंग", "पोस्टर और फ्लायर्स", "ऐप ग्राफिक्स", "बिज़नेस ID"] },
+                { tEn: "Website & Tech", tHi: "वेबसाइट और टेक", c: "indigo", i: "fa-globe", pEn: ["Web Development", "Landing Pages", "CRM Automation", "Analytics Setup"], pHi: ["वेब डेवलपमेंट", "लैंडिंग पेज", "CRM ऑटोमेशन", "एनालिटिक्स सेटअप"] },
+                { tEn: "Why Choose Us", tHi: "हमें क्यों चुनें", c: "yellow", i: "fa-star", pEn: ["Result-driven", "Experienced Team", "Latest Tech", "Transparent Reports"], pHi: ["परिणाम-संचालित", "अनुभवी टीम", "नवीनतम तकनीक", "पारदर्शी रिपोर्ट्स"] }
             ];
-            document.getElementById('detailedServicesGrid').innerHTML = services.map(s => `
+            
+            document.getElementById('detailedServicesGrid').innerHTML = services.map(s => {
+                const title = currentLang === 'hi' ? s.tHi : s.tEn;
+                const points = currentLang === 'hi' ? s.pHi : s.pEn;
+                return `
                 <div class="group bg-white rounded-3xl p-6 md:p-8 border-2 border-${s.c}-100 hover:border-${s.c}-400 shadow-sm hover:shadow-xl transition-all hover:-translate-y-2 relative overflow-hidden">
                     <div class="absolute top-0 right-0 bg-${s.c}-500 w-24 h-24 rounded-bl-[4rem] opacity-5"></div>
                     <div class="w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-gradient-to-br from-${s.c}-500 to-${s.c}-600 flex items-center justify-center text-white text-2xl md:text-3xl shadow-lg mb-6"><i class="fas ${s.i}"></i></div>
-                    <h3 class="text-xl md:text-2xl font-black text-slate-800 mb-4 font-['Outfit']">${s.t}</h3>
-                    <ul class="space-y-3">${s.p.map(p => `<li class="flex items-start gap-3 text-sm font-bold text-slate-600"><i class="fas fa-check-circle text-${s.c}-500 mt-0.5"></i>${p}</li>`).join('')}</ul>
-                </div>`).join('');
+                    <h3 class="text-xl md:text-2xl font-black text-slate-800 mb-4 font-['Outfit']">${title}</h3>
+                    <ul class="space-y-3">${points.map(p => `<li class="flex items-start gap-3 text-sm font-bold text-slate-600"><i class="fas fa-check-circle text-${s.c}-500 mt-0.5"></i>${p}</li>`).join('')}</ul>
+                </div>`;
+            }).join('');
 
+            // UPDATED: Other Services with Dynamic Language Support
             document.getElementById('serviceGrid').innerHTML = SITE_CONFIG.otherServices.map((s, i) => `
                 <div class="w-full">
                     <a href="${getWALink('Service', s.en)}" class="block group relative overflow-hidden rounded-2xl shadow-lg mb-4"><img src="${s.img}" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"></a>
-                    ${i === 0 ? `<a href="${getWALink('Inquiry')}" class="block w-full bg-gradient-to-r from-emerald-800 to-teal-600 py-4 text-center text-white font-black uppercase tracking-widest my-4 rounded-xl shadow-xl hover:scale-[1.01] transition-all"><i class="fab fa-whatsapp text-2xl mr-2"></i> Contact For More Information</a>` : ''}
+                    ${i === 0 ? `<a href="${getWALink('Inquiry')}" class="block w-full bg-gradient-to-r from-emerald-800 to-teal-600 py-4 text-center text-white font-black uppercase tracking-widest my-4 rounded-xl shadow-xl hover:scale-[1.01] transition-all"><i class="fab fa-whatsapp text-2xl mr-2"></i> ${currentLang === 'hi' ? 'अधिक जानकारी के लिए संपर्क करें' : 'Contact For More Information'}</a>` : ''}
                 </div>`).join('');
         }
 
@@ -843,7 +895,16 @@
             const ad = SITE_CONFIG.bottomAds[bottomIdx];
             const bT = document.getElementById('bottomAdText');
             const bB = document.getElementById('adBottomBtn');
-            if(bT) { bT.style.opacity = 0; setTimeout(() => { bT.innerText = ad.en; bB.href = getWALink('BottomAd', ad.link); bT.style.opacity = 1; bottomIdx = (bottomIdx + 1) % SITE_CONFIG.bottomAds.length; }, 500); }
+            if(bT) { 
+                bT.style.opacity = 0; 
+                setTimeout(() => { 
+                    bT.innerText = currentLang === 'hi' ? ad.hi : ad.en; 
+                    // UPDATED: Using 'Service' as type and full ad text as item to be specific in WhatsApp message
+                    bB.href = getWALink('Service', ad.en); 
+                    bT.style.opacity = 1; 
+                    bottomIdx = (bottomIdx + 1) % SITE_CONFIG.bottomAds.length; 
+                }, 500); 
+            }
         }
 
         window.onload = () => {
